@@ -1,0 +1,8 @@
+[build]
+  command = "pnpm --filter @workspace/the-zero-bug run build"
+  publish = "artifacts/the-zero-bug/dist/public"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
