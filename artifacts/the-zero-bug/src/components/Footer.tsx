@@ -12,7 +12,8 @@ export function Footer() {
     setIsSubmitting(true);
     setMessage("");
     try {
-      const res = await fetch("/api/subscribe", {
+      const apiBase = import.meta.env.VITE_API_URL || "";
+      const res = await fetch(`${apiBase}/api/subscribe`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email }),
