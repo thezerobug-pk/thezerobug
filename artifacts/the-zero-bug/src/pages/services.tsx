@@ -21,9 +21,9 @@ const services = [
     desc: "Native-quality mobile apps for iOS and Android that users actually love to open.",
     features: ["React Native Cross-Platform", "Flutter Apps", "Native iOS & Android", "Offline-First Architecture", "App Store Optimization"],
     tech: ["React Native", "Flutter", "Swift", "Kotlin", "Firebase"],
-    color: "from-purple-500 to-pink-500",
-    bg: "from-purple-50 to-pink-50",
-    border: "border-purple-100",
+    color: "from-rose-500 to-pink-500",
+    bg: "from-rose-50 to-pink-50",
+    border: "border-blue-100",
   },
   {
     icon: Layers,
@@ -51,8 +51,8 @@ const services = [
     desc: "Intelligent systems that learn, adapt, and automate — from LLM integrations to custom ML models.",
     features: ["LLM Integration (GPT, Claude)", "RAG Pipelines", "Computer Vision Systems", "NLP & Text Analytics", "AI-powered Workflows"],
     tech: ["Python", "LangChain", "OpenAI", "Hugging Face", "Pinecone", "PyTorch"],
-    color: "from-indigo-500 to-purple-500",
-    bg: "from-indigo-50 to-purple-50",
+    color: "from-blue-500 to-sky-600",
+    bg: "from-blue-50 to-sky-50",
     border: "border-indigo-100",
   },
   {
@@ -99,7 +99,7 @@ export default function Services() {
   return (
     <div className="overflow-hidden">
       {/* Hero */}
-      <section className="relative py-32 bg-gradient-to-br from-blue-50 via-white to-purple-50">
+      <section className="relative py-32 bg-gradient-to-br from-blue-50 via-white to-blue-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-900">
         <FloatingOrbs />
         <AnimatedSection className="max-w-4xl mx-auto px-4 text-center">
           <div className="inline-flex items-center gap-2 bg-primary/10 text-primary text-sm font-medium px-4 py-2 rounded-full mb-6 border border-primary/20">
@@ -108,7 +108,7 @@ export default function Services() {
           </div>
           <h1 className="text-5xl md:text-6xl font-black tracking-tight text-foreground mb-6">
             Full-Stack Services <br />
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Built to Last</span>
+            <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Built to Last</span>
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             From pixel-perfect interfaces to bulletproof backends — we cover every layer of the modern software stack with elite engineering talent.
@@ -117,7 +117,7 @@ export default function Services() {
       </section>
 
       {/* Services Grid */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white dark:bg-slate-900 dark:bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
           {services.map((s, i) => (
             <AnimatedSection key={s.title} delay={i * 0.05}>
@@ -170,13 +170,13 @@ export default function Services() {
       <section className="py-24 bg-secondary/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-16">
-            <h2 className="text-4xl font-black">Our <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Engineering Process</span></h2>
+            <h2 className="text-4xl font-black">Our <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Engineering Process</span></h2>
           </AnimatedSection>
           <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
             {process.map((p, i) => (
               <AnimatedSection key={p.num} delay={i * 0.08}>
                 <div className="text-center p-5">
-                  <div className="w-12 h-12 mx-auto rounded-2xl bg-gradient-to-br from-blue-600 to-purple-600 text-white font-black text-sm flex items-center justify-center mb-4 shadow-md shadow-blue-500/20">
+                  <div className="w-12 h-12 mx-auto rounded-2xl bg-gradient-to-br from-blue-600 to-cyan-500 text-white font-black text-sm flex items-center justify-center mb-4 shadow-md shadow-blue-500/20">
                     {p.num}
                   </div>
                   <h3 className="font-bold text-sm text-foreground mb-2">{p.title}</h3>
@@ -189,7 +189,7 @@ export default function Services() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 bg-gradient-to-br from-blue-600 to-purple-700">
+      <section className="py-24 bg-gradient-to-br from-blue-700 to-cyan-600">
         <AnimatedSection className="max-w-3xl mx-auto px-4 text-center">
           <h2 className="text-4xl font-black text-white mb-4">Not Sure Which Service You Need?</h2>
           <p className="text-white/80 mb-8">Schedule a free 30-minute technical consultation. We'll assess your needs and recommend the right approach.</p>

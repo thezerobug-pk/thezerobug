@@ -28,9 +28,9 @@ const solutions = [
     title: "AI Automation",
     desc: "Replace repetitive workflows with intelligent systems. Save thousands of hours per year.",
     features: ["Document Processing AI", "Intelligent Routing", "Predictive Analytics", "LLM-Powered Workflows"],
-    color: "from-purple-500 to-indigo-500",
-    bg: "from-purple-50 to-indigo-50",
-    border: "border-purple-100",
+    color: "from-blue-500 to-sky-600",
+    bg: "from-blue-50 to-sky-50",
+    border: "border-blue-100",
   },
   {
     icon: CreditCard,
@@ -73,8 +73,8 @@ const solutions = [
     title: "Custom Dashboards",
     desc: "Real-time data visualization platforms that give your team the insights they need, when they need them.",
     features: ["Real-Time Data Streaming", "Custom Chart Libraries", "Role-Based Access Control", "Export & Reporting"],
-    color: "from-indigo-500 to-purple-500",
-    bg: "from-indigo-50 to-purple-50",
+    color: "from-blue-500 to-sky-600",
+    bg: "from-blue-50 to-sky-50",
     border: "border-indigo-100",
   },
 ];
@@ -93,7 +93,7 @@ export default function Solutions() {
   return (
     <div className="overflow-hidden">
       {/* Hero */}
-      <section className="relative py-32 bg-gradient-to-br from-blue-50 via-white to-purple-50">
+      <section className="relative py-32 bg-gradient-to-br from-blue-50 via-white to-blue-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-900">
         <FloatingOrbs />
         <AnimatedSection className="max-w-4xl mx-auto px-4 text-center">
           <div className="inline-flex items-center gap-2 bg-primary/10 text-primary text-sm font-medium px-4 py-2 rounded-full mb-6 border border-primary/20">
@@ -102,7 +102,7 @@ export default function Solutions() {
           </div>
           <h1 className="text-5xl md:text-6xl font-black tracking-tight text-foreground mb-6">
             Enterprise-Grade Solutions <br />
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">For Every Industry</span>
+            <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">For Every Industry</span>
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             We don't just write code — we solve complex business problems. Our industry-specific solutions are built on deep domain expertise and engineering excellence.
@@ -111,7 +111,7 @@ export default function Solutions() {
       </section>
 
       {/* Industries */}
-      <section className="py-10 bg-white border-b border-border">
+      <section className="py-10 bg-white dark:bg-slate-900 border-b border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap justify-center gap-3">
           {industries.map((ind) => (
             <span key={ind} className="px-5 py-2 rounded-full bg-secondary text-sm font-medium text-foreground border border-border hover:border-primary/30 hover:text-primary transition-colors cursor-pointer">
@@ -122,7 +122,7 @@ export default function Solutions() {
       </section>
 
       {/* Solutions Bento Grid */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white dark:bg-slate-900 dark:bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
             {solutions.map((s, i) => (
@@ -162,7 +162,7 @@ export default function Solutions() {
       <section className="py-24 bg-secondary/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-16">
-            <h2 className="text-4xl font-black">How We Deliver <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Solutions</span></h2>
+            <h2 className="text-4xl font-black">How We Deliver <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Solutions</span></h2>
             <p className="mt-4 text-muted-foreground">A structured approach that minimizes risk and maximizes value delivery.</p>
           </AnimatedSection>
           <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
@@ -172,7 +172,7 @@ export default function Solutions() {
                   {i < workflow.length - 1 && (
                     <div className="hidden md:block absolute top-7 left-[calc(50%+28px)] right-0 h-0.5 bg-gradient-to-r from-primary/40 to-accent/40" />
                   )}
-                  <div className="w-14 h-14 mx-auto rounded-full bg-gradient-to-br from-blue-600 to-purple-600 text-white font-black text-sm flex items-center justify-center mb-4 shadow-lg z-10 relative">
+                  <div className="w-14 h-14 mx-auto rounded-full bg-gradient-to-br from-blue-600 to-cyan-500 text-white font-black text-sm flex items-center justify-center mb-4 shadow-lg z-10 relative">
                     {w.num}
                   </div>
                   <h3 className="font-bold text-sm text-foreground mb-2">{w.title}</h3>
@@ -185,7 +185,7 @@ export default function Solutions() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 bg-gradient-to-br from-blue-600 to-purple-700">
+      <section className="py-24 bg-gradient-to-br from-blue-700 to-cyan-600">
         <AnimatedSection className="max-w-3xl mx-auto px-4 text-center">
           <h2 className="text-4xl font-black text-white mb-4">Have a Complex Problem to Solve?</h2>
           <p className="text-white/80 mb-8">Our solution architects love challenges. Tell us what you're building and we'll show you how we'd approach it.</p>

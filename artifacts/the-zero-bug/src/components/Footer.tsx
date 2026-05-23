@@ -3,15 +3,15 @@ import { Bug, Twitter, Github, Linkedin, Dribbble } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="bg-white border-t border-border pt-16 pb-8 relative overflow-hidden">
+    <footer className="bg-white dark:bg-slate-900 border-t border-border pt-16 pb-8 relative overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
-      
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-2">
               <Bug className="h-6 w-6 text-primary" />
-              <span className="font-bold text-xl tracking-tight bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              <span className="font-bold text-xl tracking-tight bg-gradient-to-r from-primary to-cyan-500 bg-clip-text text-transparent">
                 The Zero Bug
               </span>
             </Link>
@@ -20,7 +20,7 @@ export function Footer() {
             </p>
             <div className="flex space-x-4 pt-2">
               {[Twitter, Github, Linkedin, Dribbble].map((Icon, i) => (
-                <a key={i} href="#" className="text-muted-foreground hover:text-primary transition-colors p-2 rounded-full hover:bg-secondary">
+                <a key={i} href="#" className="text-muted-foreground hover:text-primary transition-colors p-2 rounded-full hover:bg-secondary dark:hover:bg-slate-800">
                   <Icon className="h-5 w-5" />
                 </a>
               ))}
@@ -57,12 +57,12 @@ export function Footer() {
             <h3 className="font-semibold text-foreground mb-4">Newsletter</h3>
             <p className="text-sm text-muted-foreground mb-4">Subscribe to our engineering updates.</p>
             <form className="flex space-x-2">
-              <input 
-                type="email" 
-                placeholder="Email address" 
-                className="bg-secondary text-sm rounded-lg px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-primary/50"
+              <input
+                type="email"
+                placeholder="Email address"
+                className="bg-secondary dark:bg-slate-800 text-sm rounded-lg px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-primary/50 dark:text-slate-200"
               />
-              <button type="submit" className="bg-primary text-white rounded-lg px-4 py-2 text-sm font-medium hover:bg-primary/90 transition-colors">
+              <button type="submit" className="bg-primary text-white rounded-lg px-4 py-2 text-sm font-medium hover:bg-primary/90 transition-colors whitespace-nowrap">
                 Subscribe
               </button>
             </form>

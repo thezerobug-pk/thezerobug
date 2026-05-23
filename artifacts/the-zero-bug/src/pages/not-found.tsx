@@ -4,7 +4,7 @@ import { Bug, Home, ArrowLeft } from "lucide-react";
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-purple-50 relative overflow-hidden">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-blue-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-900 relative overflow-hidden">
       {/* Background orbs */}
       <motion.div
         animate={{ y: [0, -20, 0], scale: [1, 1.05, 1] }}
@@ -14,7 +14,7 @@ export default function NotFound() {
       <motion.div
         animate={{ y: [0, 25, 0], scale: [1, 1.08, 1] }}
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-        className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-purple-500/10 rounded-full blur-[100px] pointer-events-none"
+        className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-blue-500/10 rounded-full blur-[100px] pointer-events-none"
       />
 
       {/* Floating particles */}
@@ -53,7 +53,7 @@ export default function NotFound() {
           }}
           className="mb-8 inline-flex"
         >
-          <div className="w-28 h-28 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center shadow-2xl shadow-blue-500/30">
+          <div className="w-28 h-28 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center shadow-2xl shadow-blue-500/30">
             <Bug className="h-14 w-14 text-white" />
           </div>
         </motion.div>
@@ -64,7 +64,7 @@ export default function NotFound() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <h1 className="text-8xl md:text-[150px] font-black bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent leading-none mb-4 select-none">
+          <h1 className="text-8xl md:text-[150px] font-black bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent leading-none mb-4 select-none">
             404
           </h1>
         </motion.div>
@@ -87,7 +87,7 @@ export default function NotFound() {
                 data-testid="button-404-home"
                 whileHover={{ scale: 1.03, y: -2 }}
                 whileTap={{ scale: 0.98 }}
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold px-8 py-4 rounded-full shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/30"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold px-8 py-4 rounded-full shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/30"
               >
                 <Home className="h-5 w-5" />
                 Return Home

@@ -25,7 +25,7 @@ export default function Contact() {
   return (
     <div className="overflow-hidden">
       {/* Hero */}
-      <section className="relative py-32 bg-gradient-to-br from-blue-50 via-white to-purple-50">
+      <section className="relative py-32 bg-gradient-to-br from-blue-50 via-white to-blue-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-900">
         <FloatingOrbs />
         <AnimatedSection className="max-w-3xl mx-auto px-4 text-center">
           <div className="inline-flex items-center gap-2 bg-primary/10 text-primary text-sm font-medium px-4 py-2 rounded-full mb-6 border border-primary/20">
@@ -34,7 +34,7 @@ export default function Contact() {
           </div>
           <h1 className="text-5xl md:text-6xl font-black tracking-tight text-foreground mb-6">
             Let's Build Something <br />
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Extraordinary</span>
+            <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Extraordinary</span>
           </h1>
           <p className="text-lg text-muted-foreground leading-relaxed">
             Tell us about your project. We'll respond within 24 hours with a plan to get started.
@@ -43,7 +43,7 @@ export default function Contact() {
       </section>
 
       {/* Main Content */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white dark:bg-slate-900 dark:bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12">
           {/* Form */}
           <AnimatedSection>
@@ -133,7 +133,7 @@ export default function Contact() {
                   whileHover={{ scale: 1.01 }}
                   whileTap={{ scale: 0.99 }}
                   type="submit"
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold py-4 rounded-xl hover:opacity-90 transition-opacity flex items-center justify-center gap-2 shadow-lg shadow-blue-500/20"
+                  className="w-full bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold py-4 rounded-xl hover:opacity-90 transition-opacity flex items-center justify-center gap-2 shadow-lg shadow-blue-500/20"
                 >
                   <Send className="h-5 w-5" />
                   Send Message
@@ -157,9 +157,9 @@ export default function Contact() {
                 <p className="text-xs text-muted-foreground mt-1">For general inquiries and project discussions</p>
               </div>
 
-              <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl border border-purple-100 p-6">
+              <div className="bg-gradient-to-br from-rose-50 to-pink-50 rounded-2xl border border-blue-100 p-6">
                 <div className="flex items-center gap-3 mb-2">
-                  <div className="p-2 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500">
+                  <div className="p-2 rounded-xl bg-gradient-to-br from-rose-500 to-pink-500">
                     <Phone className="h-5 w-5 text-white" />
                   </div>
                   <h3 className="font-bold text-foreground">Call Us</h3>
@@ -187,7 +187,7 @@ export default function Contact() {
               </div>
 
               {/* Map placeholder */}
-              <div className="rounded-2xl bg-gradient-to-br from-blue-100 to-purple-100 border border-blue-200 h-40 flex items-center justify-center">
+              <div className="rounded-2xl bg-gradient-to-br from-blue-100 to-cyan-100 border border-blue-200 h-40 flex items-center justify-center">
                 <div className="text-center">
                   <MapPin className="h-8 w-8 text-primary mx-auto mb-2" />
                   <p className="text-sm font-medium text-foreground/70">Interactive Map</p>
@@ -203,7 +203,7 @@ export default function Contact() {
       <section className="py-24 bg-secondary/30">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-12">
-            <h2 className="text-4xl font-black">Frequently Asked <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Questions</span></h2>
+            <h2 className="text-4xl font-black">Frequently Asked <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Questions</span></h2>
           </AnimatedSection>
           <div className="space-y-3">
             {faqs.map((faq, i) => (

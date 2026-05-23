@@ -16,11 +16,11 @@ const jobs = [
 const benefits = [
   { icon: Laptop, title: "Remote First", desc: "Work from anywhere. We have team members in 18 countries and we optimize for async collaboration.", color: "from-blue-500 to-cyan-500" },
   { icon: Heart, title: "Premium Healthcare", desc: "Full medical, dental, and vision coverage for you and your family, wherever you are in the world.", color: "from-rose-500 to-pink-500" },
-  { icon: GraduationCap, title: "$3,000 Learning Budget", desc: "Annual budget for courses, conferences, books, and anything else that makes you a sharper engineer.", color: "from-purple-500 to-indigo-500" },
+  { icon: GraduationCap, title: "$3,000 Learning Budget", desc: "Annual budget for courses, conferences, books, and anything else that makes you a sharper engineer.", color: "from-blue-500 to-sky-600" },
   { icon: Globe, title: "Annual Team Retreat", desc: "Once a year, we fly the entire company to an amazing destination for a week of work and fun.", color: "from-teal-500 to-emerald-500" },
   { icon: Coffee, title: "Home Office Stipend", desc: "$1,500 one-time budget to build the workspace that makes you most productive.", color: "from-amber-500 to-orange-500" },
   { icon: Dumbbell, title: "Wellness Allowance", desc: "$100/mo for gym memberships, sports clubs, therapy, meditation apps — your health, your choice.", color: "from-cyan-500 to-blue-500" },
-  { icon: Users, title: "Equity Package", desc: "Competitive equity grants so you own a piece of what we're building together.", color: "from-indigo-500 to-purple-500" },
+  { icon: Users, title: "Equity Package", desc: "Competitive equity grants so you own a piece of what we're building together.", color: "from-blue-500 to-sky-600" },
   { icon: Zap, title: "4-Day Work Week", desc: "We pilot a 4-day work week every quarter. When it works, we ship more. The data keeps surprising us.", color: "from-emerald-500 to-teal-500" },
 ];
 
@@ -33,7 +33,7 @@ const process = [
 
 const culture = [
   { title: "Ownership Culture", desc: "Engineers own their features end-to-end, from spec to production monitoring.", color: "from-blue-50 to-cyan-50", border: "border-blue-100", icon: Zap },
-  { title: "High Standards", desc: "We hire slowly and care deeply about craft. You'll work with people who raise your bar.", color: "from-purple-50 to-indigo-50", border: "border-purple-100", icon: Users },
+  { title: "High Standards", desc: "We hire slowly and care deeply about craft. You'll work with people who raise your bar.", color: "from-blue-50 to-sky-50", border: "border-blue-100", icon: Users },
   { title: "Move Fast, Ship Quality", desc: "Speed and quality aren't opposites. We prove that every two-week sprint.", color: "from-amber-50 to-orange-50", border: "border-amber-100", icon: ArrowRight },
   { title: "Radical Transparency", desc: "We share company financials, strategy, and decisions openly with every team member.", color: "from-rose-50 to-pink-50", border: "border-rose-100", icon: Globe },
 ];
@@ -42,7 +42,7 @@ export default function Careers() {
   return (
     <div className="overflow-hidden">
       {/* Hero */}
-      <section className="relative py-32 bg-gradient-to-br from-blue-50 via-white to-purple-50">
+      <section className="relative py-32 bg-gradient-to-br from-blue-50 via-white to-blue-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-900">
         <FloatingOrbs />
         <AnimatedSection className="max-w-4xl mx-auto px-4 text-center">
           <div className="inline-flex items-center gap-2 bg-primary/10 text-primary text-sm font-medium px-4 py-2 rounded-full mb-6 border border-primary/20">
@@ -51,7 +51,7 @@ export default function Careers() {
           </div>
           <h1 className="text-5xl md:text-6xl font-black tracking-tight text-foreground mb-6">
             Work With the <br />
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Best Engineers</span>
+            <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Best Engineers</span>
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             We're building a team of world-class engineers, designers, and product thinkers. If you obsess over quality and love shipping, you'll fit right in.
@@ -60,10 +60,10 @@ export default function Careers() {
       </section>
 
       {/* Culture */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white dark:bg-slate-900 dark:bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-12">
-            <h2 className="text-4xl font-black">How We <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Work</span></h2>
+            <h2 className="text-4xl font-black">How We <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Work</span></h2>
           </AnimatedSection>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
             {culture.map((c, i) => (
@@ -88,7 +88,7 @@ export default function Careers() {
       <section className="py-24 bg-secondary/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-16">
-            <h2 className="text-4xl font-black">We Take <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Care of You</span></h2>
+            <h2 className="text-4xl font-black">We Take <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Care of You</span></h2>
             <p className="mt-4 text-muted-foreground">Everything you need to do the best work of your career.</p>
           </AnimatedSection>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -108,10 +108,10 @@ export default function Careers() {
       </section>
 
       {/* Open Positions */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-white dark:bg-slate-900 dark:bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-12">
-            <h2 className="text-4xl font-black">Open <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Positions</span></h2>
+            <h2 className="text-4xl font-black">Open <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Positions</span></h2>
             <p className="mt-4 text-muted-foreground">{jobs.length} roles currently open. All remote-friendly.</p>
           </AnimatedSection>
           <div className="space-y-4">
@@ -119,7 +119,7 @@ export default function Careers() {
               <AnimatedSection key={job.title} delay={i * 0.06}>
                 <motion.div
                   whileHover={{ y: -2, boxShadow: "0 8px 30px rgba(99,102,241,0.08)" }}
-                  className="group bg-white rounded-2xl border border-border p-6 flex flex-col md:flex-row md:items-center gap-4 transition-all cursor-pointer"
+                  className="group bg-white dark:bg-slate-900 rounded-2xl border border-border p-6 flex flex-col md:flex-row md:items-center gap-4 transition-all cursor-pointer"
                 >
                   <div className="flex-1">
                     <div className="flex flex-wrap items-center gap-2 mb-2">
@@ -133,7 +133,7 @@ export default function Careers() {
                     </div>
                   </div>
                   <div className="flex-shrink-0">
-                    <button data-testid={`button-apply-${i}`} className="bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold px-6 py-3 rounded-full text-sm hover:opacity-90 transition-opacity flex items-center gap-2 group-hover:shadow-md group-hover:shadow-blue-500/20">
+                    <button data-testid={`button-apply-${i}`} className="bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-semibold px-6 py-3 rounded-full text-sm hover:opacity-90 transition-opacity flex items-center gap-2 group-hover:shadow-md group-hover:shadow-blue-500/20">
                       Apply Now <ArrowRight className="h-4 w-4" />
                     </button>
                   </div>
@@ -148,14 +148,14 @@ export default function Careers() {
       <section className="py-24 bg-secondary/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-16">
-            <h2 className="text-4xl font-black">Our Hiring <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Process</span></h2>
+            <h2 className="text-4xl font-black">Our Hiring <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Process</span></h2>
             <p className="mt-4 text-muted-foreground">Transparent, fast, and respectful of your time.</p>
           </AnimatedSection>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             {process.map((p, i) => (
               <AnimatedSection key={p.num} delay={i * 0.08}>
                 <div className="text-center">
-                  <div className="w-14 h-14 mx-auto rounded-full bg-gradient-to-br from-blue-600 to-purple-600 text-white font-black text-lg flex items-center justify-center mb-4 shadow-lg">
+                  <div className="w-14 h-14 mx-auto rounded-full bg-gradient-to-br from-blue-600 to-cyan-500 text-white font-black text-lg flex items-center justify-center mb-4 shadow-lg">
                     {p.num}
                   </div>
                   <h3 className="font-bold text-foreground mb-2">{p.title}</h3>

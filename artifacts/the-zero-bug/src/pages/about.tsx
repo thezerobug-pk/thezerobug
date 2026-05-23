@@ -6,10 +6,10 @@ import { FloatingOrbs } from "@/components/FloatingOrbs";
 
 const team = [
   { name: "Alex Reynolds", role: "CEO & Co-Founder", initials: "AR", gradient: "from-blue-500 to-cyan-500", bio: "Ex-Google engineer with 15 years shipping at scale." },
-  { name: "Nadia Kovacs", role: "CTO", initials: "NK", gradient: "from-purple-500 to-pink-500", bio: "Distributed systems expert. Led engineering at 3 unicorns." },
+  { name: "Nadia Kovacs", role: "CTO", initials: "NK", gradient: "from-rose-500 to-pink-500", bio: "Distributed systems expert. Led engineering at 3 unicorns." },
   { name: "James Okonkwo", role: "Head of Design", initials: "JO", gradient: "from-amber-500 to-orange-500", bio: "Former Figma designer. Obsessed with pixel-perfect craft." },
   { name: "Lin Wei", role: "VP Engineering", initials: "LW", gradient: "from-teal-500 to-emerald-500", bio: "Built the infrastructure behind 2 billion-dollar platforms." },
-  { name: "Sara El-Amin", role: "Head of AI", initials: "SE", gradient: "from-indigo-500 to-purple-500", bio: "PhD in ML. Published researcher, now building real AI products." },
+  { name: "Sara El-Amin", role: "Head of AI", initials: "SE", gradient: "from-blue-500 to-sky-600", bio: "PhD in ML. Published researcher, now building real AI products." },
   { name: "Tomás Vega", role: "Head of DevOps", initials: "TV", gradient: "from-rose-500 to-pink-500", bio: "Kubernetes wizard. 99.99% uptime is his personal minimum." },
 ];
 
@@ -27,7 +27,7 @@ const values = [
   { icon: Zap, title: "Velocity Without Compromise", desc: "Speed matters. We deliver fast without cutting corners on quality.", color: "from-amber-500 to-orange-500" },
   { icon: Heart, title: "Client Partnership", desc: "We treat your product like our own. Your success metrics are our metrics.", color: "from-rose-500 to-pink-500" },
   { icon: Users, title: "Radical Transparency", desc: "Daily standups, weekly demos, full code ownership. No black boxes.", color: "from-teal-500 to-emerald-500" },
-  { icon: Target, title: "Engineering Excellence", desc: "We hire the top 1% of engineers and invest in their continuous growth.", color: "from-purple-500 to-indigo-500" },
+  { icon: Target, title: "Engineering Excellence", desc: "We hire the top 1% of engineers and invest in their continuous growth.", color: "from-blue-500 to-sky-600" },
   { icon: Award, title: "Long-term Thinking", desc: "We optimize for the 5-year outcome, not just the next sprint.", color: "from-emerald-500 to-teal-500" },
 ];
 
@@ -42,7 +42,7 @@ export default function About() {
   return (
     <div className="overflow-hidden">
       {/* Hero */}
-      <section className="relative py-32 bg-gradient-to-br from-blue-50 via-white to-purple-50">
+      <section className="relative py-32 bg-gradient-to-br from-blue-50 via-white to-blue-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-900">
         <FloatingOrbs />
         <AnimatedSection className="max-w-4xl mx-auto px-4 text-center">
           <div className="inline-flex items-center gap-2 bg-primary/10 text-primary text-sm font-medium px-4 py-2 rounded-full mb-6 border border-primary/20">
@@ -50,7 +50,7 @@ export default function About() {
             Our Story
           </div>
           <h1 className="text-5xl md:text-6xl font-black tracking-tight text-foreground mb-6">
-            The Agency Built on a <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Bold Promise</span>
+            The Agency Built on a <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Bold Promise</span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
             In 2012, we made a promise: deliver software with zero critical bugs. Twelve years later, that promise has held through 200+ projects, 50+ engineers, and clients in 30 countries.
@@ -59,7 +59,7 @@ export default function About() {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-white dark:bg-slate-900 dark:bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-8">
           <AnimatedSection>
             <motion.div
@@ -78,9 +78,9 @@ export default function About() {
           <AnimatedSection delay={0.1}>
             <motion.div
               whileHover={{ y: -4 }}
-              className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-3xl p-8 border border-purple-100 h-full"
+              className="bg-gradient-to-br from-rose-50 to-pink-50 rounded-3xl p-8 border border-blue-100 h-full"
             >
-              <div className="inline-flex p-3 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-500 mb-5">
+              <div className="inline-flex p-3 rounded-2xl bg-gradient-to-br from-rose-500 to-pink-500 mb-5">
                 <Eye className="h-7 w-7 text-white" />
               </div>
               <h3 className="text-2xl font-black text-foreground mb-3">Our Vision</h3>
@@ -96,7 +96,7 @@ export default function About() {
       <section className="py-24 bg-secondary/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-black">Meet the <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Team</span></h2>
+            <h2 className="text-4xl md:text-5xl font-black">Meet the <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Team</span></h2>
             <p className="mt-4 text-lg text-muted-foreground">The people behind 12 years of zero-defect engineering.</p>
           </AnimatedSection>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -128,13 +128,13 @@ export default function About() {
       </section>
 
       {/* Timeline */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-white dark:bg-slate-900 dark:bg-slate-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-black">Our <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Journey</span></h2>
+            <h2 className="text-4xl md:text-5xl font-black">Our <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Journey</span></h2>
           </AnimatedSection>
           <div className="relative">
-            <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-blue-500 to-purple-500 -translate-x-1/2 hidden md:block" />
+            <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-blue-500 to-cyan-400 -translate-x-1/2 hidden md:block" />
             <div className="space-y-8">
               {timeline.map((item, i) => (
                 <AnimatedSection key={item.year} delay={i * 0.08}>
@@ -145,7 +145,7 @@ export default function About() {
                         <p className="text-sm text-muted-foreground mt-1 leading-relaxed">{item.desc}</p>
                       </div>
                     </div>
-                    <div className="flex-shrink-0 w-14 h-14 rounded-full bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center text-white font-black text-xs shadow-lg z-10">
+                    <div className="flex-shrink-0 w-14 h-14 rounded-full bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center text-white font-black text-xs shadow-lg z-10">
                       {item.year.slice(2)}
                     </div>
                     <div className="flex-1 hidden md:block" />
@@ -161,7 +161,7 @@ export default function About() {
       <section className="py-24 bg-secondary/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-black">What We <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Stand For</span></h2>
+            <h2 className="text-4xl md:text-5xl font-black">What We <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Stand For</span></h2>
           </AnimatedSection>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {values.map((v, i) => (
@@ -183,7 +183,7 @@ export default function About() {
       </section>
 
       {/* Awards */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-white dark:bg-slate-900 dark:bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-12">
             <h2 className="text-3xl font-black">Awards & Certifications</h2>
@@ -191,7 +191,7 @@ export default function About() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {awards.map((a, i) => (
               <AnimatedSection key={a.name} delay={i * 0.08}>
-                <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl border border-blue-100 p-5 text-center">
+                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl border border-blue-100 p-5 text-center">
                   <Award className="h-8 w-8 text-primary mx-auto mb-3" />
                   <p className="font-bold text-sm text-foreground">{a.name}</p>
                   <p className="text-xs text-muted-foreground mt-1">{a.cat}</p>
@@ -203,7 +203,7 @@ export default function About() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 bg-gradient-to-br from-blue-600 to-purple-700">
+      <section className="py-24 bg-gradient-to-br from-blue-700 to-cyan-600">
         <AnimatedSection className="max-w-3xl mx-auto px-4 text-center">
           <h2 className="text-4xl font-black text-white mb-4">Want to Build With Us?</h2>
           <p className="text-white/80 mb-8">We're always looking for exceptional talent and ambitious clients.</p>

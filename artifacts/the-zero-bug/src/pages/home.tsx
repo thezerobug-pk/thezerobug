@@ -9,10 +9,10 @@ import { FloatingOrbs } from "@/components/FloatingOrbs";
 
 const services = [
   { icon: Globe, title: "Web Development", desc: "Blazing-fast web apps built with modern frameworks that scale to millions.", color: "from-blue-500 to-cyan-500" },
-  { icon: Smartphone, title: "Mobile Apps", desc: "Native and cross-platform apps that delight users on every device.", color: "from-purple-500 to-pink-500" },
+  { icon: Smartphone, title: "Mobile Apps", desc: "Native and cross-platform apps that delight users on every device.", color: "from-rose-500 to-pink-500" },
   { icon: Layers, title: "UI/UX Design", desc: "Human-centered design that converts visitors into loyal customers.", color: "from-orange-500 to-amber-500" },
   { icon: Cloud, title: "SaaS Products", desc: "End-to-end SaaS platforms built to scale and monetize.", color: "from-teal-500 to-emerald-500" },
-  { icon: Brain, title: "AI Solutions", desc: "Intelligent systems powered by the latest in machine learning and LLMs.", color: "from-indigo-500 to-purple-500" },
+  { icon: Brain, title: "AI Solutions", desc: "Intelligent systems powered by the latest in machine learning and LLMs.", color: "from-blue-500 to-sky-600" },
   { icon: Server, title: "Cloud & DevOps", desc: "Infrastructure that never sleeps — resilient, automated, and cost-efficient.", color: "from-cyan-500 to-blue-500" },
   { icon: ShoppingCart, title: "E-commerce", desc: "High-converting online stores engineered to sell more, automatically.", color: "from-rose-500 to-pink-500" },
   { icon: Code, title: "Custom Software", desc: "Bespoke solutions built precisely to your business requirements.", color: "from-amber-500 to-orange-500" },
@@ -59,7 +59,7 @@ export default function Home() {
       {/* Hero */}
       <section className="relative min-h-screen flex items-center justify-center pt-20 pb-32">
         <FloatingOrbs />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-50 via-white to-purple-50/30 -z-10" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-50 via-white to-blue-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-900/30 -z-10" />
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-center">
           <div>
@@ -82,7 +82,7 @@ export default function Home() {
               Building Digital
               <br />
               Products With{" "}
-              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
                 Zero Bugs.
               </span>
             </motion.h1>
@@ -103,7 +103,7 @@ export default function Home() {
               className="mt-10 flex flex-wrap gap-4"
             >
               <Link href="/contact">
-                <button data-testid="button-start-project" className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold px-8 py-4 rounded-full hover:opacity-90 transition-all shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/30 hover:-translate-y-0.5">
+                <button data-testid="button-start-project" className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-semibold px-8 py-4 rounded-full hover:opacity-90 transition-all shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/30 hover:-translate-y-0.5">
                   Start a Project
                   <ArrowRight className="h-5 w-5" />
                 </button>
@@ -124,7 +124,7 @@ export default function Home() {
             >
               <div className="flex -space-x-3">
                 {["SC", "MH", "PS", "AK"].map((initials, i) => (
-                  <div key={i} className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 border-2 border-white flex items-center justify-center text-white text-xs font-bold">
+                  <div key={i} className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-cyan-400 border-2 border-white flex items-center justify-center text-white text-xs font-bold">
                     {initials}
                   </div>
                 ))}
@@ -158,7 +158,7 @@ export default function Home() {
                 {[
                   { label: "Projects Live", value: "47", trend: "+12%", color: "bg-blue-50 text-blue-700" },
                   { label: "Deploy Success", value: "99.9%", trend: "+0.2%", color: "bg-emerald-50 text-emerald-700" },
-                  { label: "Bugs Fixed", value: "2.4k", trend: "↑ this month", color: "bg-purple-50 text-purple-700" },
+                  { label: "Bugs Fixed", value: "2.4k", trend: "↑ this month", color: "bg-blue-50 text-blue-700" },
                 ].map((stat, i) => (
                   <div key={i} className={`${stat.color} rounded-2xl p-3`}>
                     <p className="text-xs font-medium opacity-70">{stat.label}</p>
@@ -176,7 +176,7 @@ export default function Home() {
                       initial={{ height: 0 }}
                       animate={{ height: `${h}%` }}
                       transition={{ duration: 0.8, delay: 0.6 + i * 0.05, ease: "easeOut" }}
-                      className="flex-1 rounded-sm bg-gradient-to-t from-blue-500 to-purple-400 opacity-80"
+                      className="flex-1 rounded-sm bg-gradient-to-t from-blue-500 to-cyan-400 opacity-80"
                     />
                   ))}
                 </div>
@@ -201,7 +201,7 @@ export default function Home() {
             <motion.div
               animate={{ y: [0, -8, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -top-6 -right-6 bg-white rounded-2xl shadow-xl border border-border p-3 flex items-center gap-2"
+              className="absolute -top-6 -right-6 bg-white dark:bg-slate-900 rounded-2xl shadow-xl border border-border p-3 flex items-center gap-2"
             >
               <CheckCircle className="h-5 w-5 text-emerald-500" />
               <span className="text-xs font-semibold">Zero critical bugs</span>
@@ -209,7 +209,7 @@ export default function Home() {
             <motion.div
               animate={{ y: [0, 8, 0] }}
               transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-              className="absolute -bottom-4 -left-8 bg-white rounded-2xl shadow-xl border border-border p-3 flex items-center gap-2"
+              className="absolute -bottom-4 -left-8 bg-white dark:bg-slate-900 rounded-2xl shadow-xl border border-border p-3 flex items-center gap-2"
             >
               <Zap className="h-5 w-5 text-amber-500" />
               <span className="text-xs font-semibold">Shipped 3 weeks early</span>
@@ -224,7 +224,7 @@ export default function Home() {
           <p className="text-center text-sm font-medium text-muted-foreground uppercase tracking-wider mb-6">Trusted by innovative companies</p>
           <div className="flex flex-wrap justify-center gap-4">
             {trustedBy.map((name) => (
-              <div key={name} className="px-5 py-2.5 bg-white rounded-full border border-border text-sm font-medium text-muted-foreground hover:text-foreground hover:border-primary/30 transition-all">
+              <div key={name} className="px-5 py-2.5 bg-white dark:bg-slate-900 rounded-full border border-border text-sm font-medium text-muted-foreground hover:text-foreground hover:border-primary/30 transition-all">
                 {name}
               </div>
             ))}
@@ -233,10 +233,10 @@ export default function Home() {
       </section>
 
       {/* Services */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-white dark:bg-slate-900 dark:bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-black text-foreground tracking-tight">What We <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Build</span></h2>
+            <h2 className="text-4xl md:text-5xl font-black text-foreground tracking-tight">What We <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Build</span></h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">From zero to production-ready. We cover every layer of the modern software stack.</p>
           </AnimatedSection>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -245,7 +245,7 @@ export default function Home() {
                 <motion.div
                   whileHover={{ y: -6, boxShadow: "0 20px 40px rgba(99,102,241,0.12)" }}
                   transition={{ duration: 0.2 }}
-                  className="group bg-white rounded-2xl border border-border p-6 cursor-pointer h-full"
+                  className="group bg-white dark:bg-slate-900 rounded-2xl border border-border p-6 cursor-pointer h-full"
                 >
                   <div className={`inline-flex p-3 rounded-xl bg-gradient-to-br ${s.color} mb-4`}>
                     <s.icon className="h-6 w-6 text-white" />
@@ -263,7 +263,7 @@ export default function Home() {
       </section>
 
       {/* Stats */}
-      <section className="py-24 bg-gradient-to-br from-blue-600 to-purple-700 relative overflow-hidden">
+      <section className="py-24 bg-gradient-to-br from-blue-700 to-cyan-600 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(255,255,255,0.1)_0%,_transparent_70%)]" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <AnimatedSection className="text-center mb-12">
@@ -287,14 +287,14 @@ export default function Home() {
       <section className="py-24 bg-secondary/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-black tracking-tight">How We <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Deliver</span></h2>
+            <h2 className="text-4xl md:text-5xl font-black tracking-tight">How We <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Deliver</span></h2>
             <p className="mt-4 text-lg text-muted-foreground">A battle-tested process refined across 200+ projects.</p>
           </AnimatedSection>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             {process.map((p, i) => (
               <AnimatedSection key={p.step} delay={i * 0.08}>
                 <div className="text-center group">
-                  <div className="w-14 h-14 mx-auto rounded-2xl bg-gradient-to-br from-blue-600 to-purple-600 text-white font-black text-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-md shadow-blue-500/20">
+                  <div className="w-14 h-14 mx-auto rounded-2xl bg-gradient-to-br from-blue-600 to-cyan-500 text-white font-black text-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-md shadow-blue-500/20">
                     {p.step}
                   </div>
                   <h3 className="font-bold text-foreground text-sm mb-1">{p.title}</h3>
@@ -307,7 +307,7 @@ export default function Home() {
       </section>
 
       {/* Tech Stack */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white dark:bg-slate-900 dark:bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-black">Technologies We Master</h2>
@@ -331,7 +331,7 @@ export default function Home() {
       <section className="py-24 bg-secondary/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-black tracking-tight">What Clients <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Say</span></h2>
+            <h2 className="text-4xl md:text-5xl font-black tracking-tight">What Clients <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Say</span></h2>
           </AnimatedSection>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {testimonials.map((t, i) => (
@@ -346,7 +346,7 @@ export default function Home() {
                   <p className="text-foreground/80 leading-relaxed flex-1 text-sm italic">"{t.text}"</p>
                   <div className="mt-5 pt-4 border-t border-border">
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center text-white text-xs font-bold">
+                      <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center text-white text-xs font-bold">
                         {t.name.split(' ').map(n => n[0]).join('')}
                       </div>
                       <div>
@@ -363,7 +363,7 @@ export default function Home() {
       </section>
 
       {/* Blog */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-white dark:bg-slate-900 dark:bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="flex items-center justify-between mb-12">
             <h2 className="text-4xl font-black">Latest Insights</h2>
@@ -376,9 +376,9 @@ export default function Home() {
               <AnimatedSection key={b.title} delay={i * 0.1}>
                 <motion.div
                   whileHover={{ y: -4 }}
-                  className="group bg-white rounded-2xl border border-border overflow-hidden hover:shadow-lg hover:shadow-blue-500/5 transition-all cursor-pointer"
+                  className="group bg-white dark:bg-slate-900 rounded-2xl border border-border overflow-hidden hover:shadow-lg hover:shadow-blue-500/5 transition-all cursor-pointer"
                 >
-                  <div className="h-2 bg-gradient-to-r from-blue-500 to-purple-500" />
+                  <div className="h-2 bg-gradient-to-r from-blue-500 to-cyan-400" />
                   <div className="p-6">
                     <div className="flex items-center gap-2 mb-3">
                       <span className="text-xs font-semibold text-primary bg-primary/10 px-3 py-1 rounded-full">{b.cat}</span>
@@ -399,7 +399,7 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 bg-gradient-to-br from-blue-600 to-purple-700 relative overflow-hidden">
+      <section className="py-24 bg-gradient-to-br from-blue-700 to-cyan-600 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_rgba(255,255,255,0.08)_0%,_transparent_60%)]" />
         <AnimatedSection className="max-w-4xl mx-auto px-4 text-center relative">
           <h2 className="text-4xl md:text-5xl font-black text-white mb-6">Ready to build something great?</h2>

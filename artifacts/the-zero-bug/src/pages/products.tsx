@@ -31,12 +31,12 @@ const products = [
     features: ["PR-level code review AI", "SAST vulnerability scanning", "Dependency audit", "GitHub & GitLab integration"],
     tech: ["Python", "OpenAI", "GitHub API", "Docker"],
     price: "$49/mo",
-    color: "from-purple-500 to-indigo-500",
-    bg: "bg-gradient-to-br from-purple-50 to-indigo-50",
-    border: "border-purple-100",
+    color: "from-blue-500 to-sky-600",
+    bg: "bg-gradient-to-br from-blue-50 to-sky-50",
+    border: "border-blue-100",
     category: "AI",
     badge: "New",
-    badgeColor: "bg-purple-100 text-purple-700",
+    badgeColor: "bg-blue-100 text-blue-700",
   },
   {
     icon: Gauge,
@@ -107,7 +107,7 @@ export default function Products() {
   return (
     <div className="overflow-hidden">
       {/* Hero */}
-      <section className="relative py-32 bg-gradient-to-br from-blue-50 via-white to-purple-50">
+      <section className="relative py-32 bg-gradient-to-br from-blue-50 via-white to-blue-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-900">
         <FloatingOrbs />
         <AnimatedSection className="max-w-4xl mx-auto px-4 text-center">
           <div className="inline-flex items-center gap-2 bg-primary/10 text-primary text-sm font-medium px-4 py-2 rounded-full mb-6 border border-primary/20">
@@ -116,7 +116,7 @@ export default function Products() {
           </div>
           <h1 className="text-5xl md:text-6xl font-black tracking-tight text-foreground mb-6">
             Software We Built <br />
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">For the World</span>
+            <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">For the World</span>
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Beyond client work, we build our own products. Each one solves a real problem we encountered while building for clients — and we use them ourselves.
@@ -125,7 +125,7 @@ export default function Products() {
       </section>
 
       {/* Filter */}
-      <section className="py-8 bg-white border-b border-border sticky top-20 z-30 backdrop-blur-md">
+      <section className="py-8 bg-white dark:bg-slate-900 border-b border-border sticky top-20 z-30 backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-center gap-2 flex-wrap">
           {categories.map((cat) => (
             <button
@@ -134,7 +134,7 @@ export default function Products() {
               onClick={() => setActiveCategory(cat)}
               className={`px-5 py-2 rounded-full text-sm font-semibold transition-all ${
                 activeCategory === cat
-                  ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-md"
+                  ? "bg-gradient-to-r from-blue-600 to-cyan-500 text-white shadow-md"
                   : "bg-secondary text-foreground hover:text-primary border border-border"
               }`}
             >
@@ -145,7 +145,7 @@ export default function Products() {
       </section>
 
       {/* Products */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white dark:bg-slate-900 dark:bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filtered.map((p, i) => (
@@ -201,7 +201,7 @@ export default function Products() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 bg-gradient-to-br from-blue-600 to-purple-700">
+      <section className="py-24 bg-gradient-to-br from-blue-700 to-cyan-600">
         <AnimatedSection className="max-w-3xl mx-auto px-4 text-center">
           <h2 className="text-4xl font-black text-white mb-4">Need a Custom Product?</h2>
           <p className="text-white/80 mb-8">We can take an existing product, fork it, customize it, and deploy it for your specific use case.</p>

@@ -25,7 +25,7 @@ const projects = [
     desc: "Cross-platform mobile payment app with biometric authentication and instant transfers.",
     tech: ["React Native", "Node.js", "Stripe", "Firebase"],
     stat: "2M+ downloads in 6 months",
-    gradient: "from-purple-500 to-pink-600",
+    gradient: "from-rose-500 to-pink-600",
     result: "4.8★ App Store rating",
   },
   {
@@ -65,7 +65,7 @@ const projects = [
     desc: "AI-powered business intelligence platform with natural language querying and predictive forecasting.",
     tech: ["Python", "LangChain", "React", "ClickHouse"],
     stat: "10x faster insights",
-    gradient: "from-indigo-500 to-purple-600",
+    gradient: "from-blue-500 to-sky-600",
     result: "70% analyst time saved",
   },
   {
@@ -107,7 +107,7 @@ export default function Portfolio() {
   return (
     <div className="overflow-hidden">
       {/* Hero */}
-      <section className="relative py-32 bg-gradient-to-br from-blue-50 via-white to-purple-50">
+      <section className="relative py-32 bg-gradient-to-br from-blue-50 via-white to-blue-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-900">
         <FloatingOrbs />
         <AnimatedSection className="max-w-4xl mx-auto px-4 text-center">
           <div className="inline-flex items-center gap-2 bg-primary/10 text-primary text-sm font-medium px-4 py-2 rounded-full mb-6 border border-primary/20">
@@ -116,7 +116,7 @@ export default function Portfolio() {
           </div>
           <h1 className="text-5xl md:text-6xl font-black tracking-tight text-foreground mb-6">
             200+ Projects. <br />
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Zero Critical Bugs.</span>
+            <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Zero Critical Bugs.</span>
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             A selection of our most impactful work — startups we helped scale, enterprises we modernized, and products we helped bring to life.
@@ -125,7 +125,7 @@ export default function Portfolio() {
       </section>
 
       {/* Filter */}
-      <section className="py-8 bg-white border-b border-border sticky top-20 z-30">
+      <section className="py-8 bg-white dark:bg-slate-900 border-b border-border sticky top-20 z-30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-center gap-2 flex-wrap">
           {categories.map((cat) => (
             <button
@@ -134,7 +134,7 @@ export default function Portfolio() {
               onClick={() => setActive(cat)}
               className={`px-5 py-2 rounded-full text-sm font-semibold transition-all ${
                 active === cat
-                  ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-md"
+                  ? "bg-gradient-to-r from-blue-600 to-cyan-500 text-white shadow-md"
                   : "bg-secondary text-foreground hover:text-primary border border-border"
               }`}
             >
@@ -145,14 +145,14 @@ export default function Portfolio() {
       </section>
 
       {/* Grid */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white dark:bg-slate-900 dark:bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filtered.map((p, i) => (
               <AnimatedSection key={p.title} delay={i * 0.06}>
                 <motion.div
                   whileHover={{ y: -8 }}
-                  className="group rounded-3xl border border-border overflow-hidden bg-white hover:shadow-xl hover:shadow-blue-500/10 transition-all cursor-pointer"
+                  className="group rounded-3xl border border-border overflow-hidden bg-white dark:bg-slate-900 hover:shadow-xl hover:shadow-blue-500/10 transition-all cursor-pointer"
                 >
                   {/* Gradient Preview */}
                   <div className={`relative h-48 bg-gradient-to-br ${p.gradient} flex items-end p-6`}>
@@ -203,7 +203,7 @@ export default function Portfolio() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 bg-gradient-to-br from-blue-600 to-purple-700">
+      <section className="py-24 bg-gradient-to-br from-blue-700 to-cyan-600">
         <AnimatedSection className="max-w-3xl mx-auto px-4 text-center">
           <h2 className="text-4xl font-black text-white mb-4">Your Project Could Be Next</h2>
           <p className="text-white/80 mb-8">Let's discuss your idea and see how we can make it a standout case study.</p>

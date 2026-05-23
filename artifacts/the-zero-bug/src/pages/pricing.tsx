@@ -36,9 +36,9 @@ const tiers = [
     desc: "The most popular choice for growing companies.",
     monthlyPrice: "$7,999",
     yearlyPrice: "$6,399",
-    color: "from-purple-600 to-indigo-600",
-    bg: "bg-gradient-to-br from-purple-600 to-indigo-700",
-    border: "border-purple-300",
+    color: "from-blue-700 to-blue-900",
+    bg: "bg-gradient-to-br from-blue-700 to-blue-900",
+    border: "border-blue-300",
     highlight: true,
     features: [
       { text: "5 dedicated engineers", included: true },
@@ -104,12 +104,12 @@ export default function Pricing() {
   return (
     <div className="overflow-hidden">
       {/* Hero */}
-      <section className="relative py-32 bg-gradient-to-br from-blue-50 via-white to-purple-50">
+      <section className="relative py-32 bg-gradient-to-br from-blue-50 via-white to-blue-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-900">
         <FloatingOrbs />
         <AnimatedSection className="max-w-3xl mx-auto px-4 text-center">
           <h1 className="text-5xl md:text-6xl font-black tracking-tight text-foreground mb-6">
             Simple, Transparent <br />
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Pricing</span>
+            <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Pricing</span>
           </h1>
           <p className="text-lg text-muted-foreground mb-8">No surprise bills. No nickel-and-diming. Just great engineering at a fair price.</p>
 
@@ -135,18 +135,18 @@ export default function Pricing() {
       </section>
 
       {/* Pricing Cards */}
-      <section className="py-12 bg-white">
+      <section className="py-12 bg-white dark:bg-slate-900 dark:bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
             {tiers.map((tier, i) => (
               <AnimatedSection key={tier.name} delay={i * 0.08}>
                 <motion.div
                   whileHover={{ y: tier.highlight ? -4 : -8 }}
-                  className={`rounded-3xl border p-7 h-full flex flex-col transition-all relative ${tier.highlight ? `${tier.bg} ${tier.border} shadow-2xl shadow-purple-500/20` : `bg-gradient-to-br ${tier.bg.replace('bg-', '')} ${tier.border}`}`}
+                  className={`rounded-3xl border p-7 h-full flex flex-col transition-all relative ${tier.highlight ? `${tier.bg} ${tier.border} shadow-2xl shadow-blue-500/20` : `bg-gradient-to-br ${tier.bg.replace('bg-', '')} ${tier.border}`}`}
                 >
                   {tier.highlight && (
                     <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-xs font-bold px-5 py-2 rounded-full shadow-lg">
+                      <span className="bg-gradient-to-r from-blue-700 to-blue-900 text-white text-xs font-bold px-5 py-2 rounded-full shadow-lg">
                         Most Popular
                       </span>
                     </div>
@@ -187,8 +187,8 @@ export default function Pricing() {
                       data-testid={`button-pricing-${tier.name.toLowerCase()}`}
                       className={`w-full py-3.5 rounded-full font-bold text-sm transition-all flex items-center justify-center gap-2 ${
                         tier.highlight
-                          ? 'bg-white text-purple-700 hover:bg-white/90 shadow-lg'
-                          : 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:opacity-90 shadow-md shadow-blue-500/20'
+                          ? 'bg-white text-blue-700 hover:bg-white/90 shadow-lg'
+                          : 'bg-gradient-to-r from-blue-600 to-cyan-500 text-white hover:opacity-90 shadow-md shadow-blue-500/20'
                       }`}
                     >
                       {tier.cta} <ArrowRight className="h-4 w-4" />
@@ -214,7 +214,7 @@ export default function Pricing() {
                   <tr className="border-b border-border bg-secondary/50">
                     <th className="text-left p-4 font-semibold text-foreground/70">Feature</th>
                     <th className="text-center p-4 font-semibold text-blue-600">Starter</th>
-                    <th className="text-center p-4 font-semibold text-purple-600">Professional</th>
+                    <th className="text-center p-4 font-semibold text-blue-600">Professional</th>
                     <th className="text-center p-4 font-semibold text-slate-700">Enterprise</th>
                   </tr>
                 </thead>
@@ -235,7 +235,7 @@ export default function Pricing() {
       </section>
 
       {/* Enterprise CTA */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white dark:bg-slate-900 dark:bg-slate-900">
         <div className="max-w-4xl mx-auto px-4">
           <AnimatedSection>
             <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl p-10 flex flex-col md:flex-row items-center gap-8">
@@ -244,7 +244,7 @@ export default function Pricing() {
                 <p className="text-white/60 text-sm">Enterprise plans include dedicated teams, SLA guarantees, and on-site availability. Let's design the right engagement for your organization.</p>
               </div>
               <Link href="/contact">
-                <button className="flex-shrink-0 bg-white text-slate-900 font-bold px-7 py-3.5 rounded-full hover:bg-white/90 transition-all flex items-center gap-2">
+                <button className="flex-shrink-0 bg-white dark:bg-slate-900 text-slate-900 font-bold px-7 py-3.5 rounded-full hover:bg-white/90 transition-all flex items-center gap-2">
                   Contact Sales <ArrowRight className="h-4 w-4" />
                 </button>
               </Link>
@@ -257,7 +257,7 @@ export default function Pricing() {
       <section className="py-20 bg-secondary/30">
         <div className="max-w-3xl mx-auto px-4">
           <AnimatedSection className="text-center mb-10">
-            <h2 className="text-3xl font-black">Pricing <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">FAQs</span></h2>
+            <h2 className="text-3xl font-black">Pricing <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">FAQs</span></h2>
           </AnimatedSection>
           <div className="space-y-3">
             {faqs.map((faq, i) => (

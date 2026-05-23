@@ -15,16 +15,16 @@ const featured = {
   authorRole: "CEO & Co-Founder",
   date: "May 20, 2026",
   readTime: "14 min read",
-  gradient: "from-blue-600 to-purple-600",
+  gradient: "from-blue-600 to-cyan-500",
 };
 
 const articles = [
-  { cat: "AI", title: "Building Production-Grade LLM Applications in 2026", excerpt: "Lessons learned from deploying AI systems for Fortune 500 clients — including the parts nobody talks about.", author: "Sara El-Amin", date: "May 12, 2026", time: "9 min", gradient: "from-purple-500 to-indigo-500" },
+  { cat: "AI", title: "Building Production-Grade LLM Applications in 2026", excerpt: "Lessons learned from deploying AI systems for Fortune 500 clients — including the parts nobody talks about.", author: "Sara El-Amin", date: "May 12, 2026", time: "9 min", gradient: "from-blue-500 to-sky-600" },
   { cat: "DevOps", title: "Zero-Downtime Deployments with Kubernetes and GitOps", excerpt: "Our battle-tested approach to shipping features without user impact, even at 3am on a Friday.", author: "Tomás Vega", date: "Apr 28, 2026", time: "7 min", gradient: "from-slate-600 to-slate-800" },
   { cat: "Design", title: "Why Your UI/UX Process Is Costing You More Than You Think", excerpt: "Design debt is real, compounding, and invisible. Here's how we quantify it and fix it before it becomes a crisis.", author: "James Okonkwo", date: "Apr 15, 2026", time: "6 min", gradient: "from-orange-500 to-amber-500" },
   { cat: "Engineering", title: "TypeScript in 2026: What We Actually Use in Production", excerpt: "Not a tutorial. A real-world breakdown of the TypeScript features that make our codebases maintainable at scale.", author: "Nadia Kovacs", date: "Apr 2, 2026", time: "8 min", gradient: "from-blue-500 to-cyan-500" },
   { cat: "Product", title: "How to Run a Discovery Workshop That Actually Discovers Things", excerpt: "Most discovery workshops are just expensive meetings. Here's how we run them to extract real insights in 4 hours.", author: "Alex Reynolds", date: "Mar 22, 2026", time: "11 min", gradient: "from-rose-500 to-pink-500" },
-  { cat: "AI", title: "Evaluating LLMs for Production: A Framework That Actually Works", excerpt: "Vibes-based LLM evaluation will get you burned in production. Here's a systematic approach that catches regressions before your users do.", author: "Sara El-Amin", date: "Mar 10, 2026", time: "12 min", gradient: "from-indigo-500 to-purple-500" },
+  { cat: "AI", title: "Evaluating LLMs for Production: A Framework That Actually Works", excerpt: "Vibes-based LLM evaluation will get you burned in production. Here's a systematic approach that catches regressions before your users do.", author: "Sara El-Amin", date: "Mar 10, 2026", time: "12 min", gradient: "from-blue-500 to-sky-600" },
 ];
 
 const trending = [
@@ -46,7 +46,7 @@ export default function Blog() {
   return (
     <div className="overflow-hidden">
       {/* Hero */}
-      <section className="relative py-32 bg-gradient-to-br from-blue-50 via-white to-purple-50">
+      <section className="relative py-32 bg-gradient-to-br from-blue-50 via-white to-blue-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-900">
         <FloatingOrbs />
         <AnimatedSection className="max-w-4xl mx-auto px-4 text-center">
           <div className="inline-flex items-center gap-2 bg-primary/10 text-primary text-sm font-medium px-4 py-2 rounded-full mb-6 border border-primary/20">
@@ -54,7 +54,7 @@ export default function Blog() {
             The Zero Bug Blog
           </div>
           <h1 className="text-5xl md:text-6xl font-black tracking-tight text-foreground mb-6">
-            Engineering <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Insights</span> <br />From the Trenches
+            Engineering <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Insights</span> <br />From the Trenches
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
             Real lessons from 200+ projects. No fluff, no hot takes — just hard-won engineering wisdom.
@@ -67,19 +67,19 @@ export default function Blog() {
               placeholder="Search articles..."
               value={searchVal}
               onChange={e => setSearchVal(e.target.value)}
-              className="w-full pl-12 pr-4 py-3.5 rounded-full bg-white border border-border focus:outline-none focus:ring-2 focus:ring-primary/30 text-sm shadow-sm"
+              className="w-full pl-12 pr-4 py-3.5 rounded-full bg-white dark:bg-slate-900 border border-border focus:outline-none focus:ring-2 focus:ring-primary/30 text-sm shadow-sm"
             />
           </div>
         </AnimatedSection>
       </section>
 
       {/* Featured */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white dark:bg-slate-900 dark:bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <motion.div
               whileHover={{ y: -4 }}
-              className="group rounded-3xl overflow-hidden border border-border bg-white hover:shadow-xl hover:shadow-blue-500/10 transition-all cursor-pointer"
+              className="group rounded-3xl overflow-hidden border border-border bg-white dark:bg-slate-900 hover:shadow-xl hover:shadow-blue-500/10 transition-all cursor-pointer"
             >
               <div className={`bg-gradient-to-br ${featured.gradient} p-12 md:p-16 flex flex-col justify-end min-h-[280px]`}>
                 <span className="text-xs font-bold bg-white/20 text-white px-3 py-1 rounded-full backdrop-blur-sm inline-block mb-4 self-start">
@@ -92,7 +92,7 @@ export default function Blog() {
                   <p className="text-muted-foreground mb-4 max-w-2xl leading-relaxed">{featured.excerpt}</p>
                   <div className="flex items-center gap-4 text-sm">
                     <div className="flex items-center gap-2">
-                      <div className="w-8 h-8 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center text-white text-xs font-bold">
+                      <div className="w-8 h-8 rounded-full bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center text-white text-xs font-bold">
                         AR
                       </div>
                       <div>
@@ -107,7 +107,7 @@ export default function Blog() {
                   </div>
                 </div>
                 <div className="flex-shrink-0">
-                  <button className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold px-6 py-3 rounded-full text-sm hover:opacity-90 transition-opacity">
+                  <button className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-semibold px-6 py-3 rounded-full text-sm hover:opacity-90 transition-opacity">
                     Read Article <ArrowRight className="h-4 w-4" />
                   </button>
                 </div>
@@ -128,7 +128,7 @@ export default function Blog() {
                 onClick={() => setActiveCat(cat)}
                 className={`px-5 py-2 rounded-full text-sm font-semibold transition-all ${
                   activeCat === cat
-                    ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-md"
+                    ? "bg-gradient-to-r from-blue-600 to-cyan-500 text-white shadow-md"
                     : "bg-white text-foreground hover:text-primary border border-border"
                 }`}
               >
@@ -142,7 +142,7 @@ export default function Blog() {
               <AnimatedSection key={a.title} delay={i * 0.07}>
                 <motion.div
                   whileHover={{ y: -4 }}
-                  className="group bg-white rounded-2xl border border-border overflow-hidden hover:shadow-lg hover:shadow-blue-500/5 transition-all cursor-pointer"
+                  className="group bg-white dark:bg-slate-900 rounded-2xl border border-border overflow-hidden hover:shadow-lg hover:shadow-blue-500/5 transition-all cursor-pointer"
                 >
                   <div className={`h-2 bg-gradient-to-r ${a.gradient}`} />
                   <div className="p-6">
@@ -173,10 +173,10 @@ export default function Blog() {
       </section>
 
       {/* Newsletter */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-white dark:bg-slate-900 dark:bg-slate-900">
         <div className="max-w-3xl mx-auto px-4">
           <AnimatedSection>
-            <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-3xl border border-blue-100 p-10 text-center">
+            <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-3xl border border-blue-100 p-10 text-center">
               <Rss className="h-10 w-10 text-primary mx-auto mb-4" />
               <h2 className="text-3xl font-black text-foreground mb-3">Get the best articles, weekly</h2>
               <p className="text-muted-foreground mb-6">Join 12,000+ engineers who read The Zero Bug's engineering insights every Tuesday.</p>
@@ -185,9 +185,9 @@ export default function Blog() {
                   data-testid="input-newsletter-email"
                   type="email"
                   placeholder="your@email.com"
-                  className="flex-1 px-4 py-3 rounded-full border border-border bg-white focus:outline-none focus:ring-2 focus:ring-primary/30 text-sm"
+                  className="flex-1 px-4 py-3 rounded-full border border-border bg-white dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-primary/30 text-sm"
                 />
-                <button data-testid="button-newsletter-subscribe" type="submit" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold px-6 py-3 rounded-full hover:opacity-90 transition-opacity text-sm">
+                <button data-testid="button-newsletter-subscribe" type="submit" className="bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-semibold px-6 py-3 rounded-full hover:opacity-90 transition-opacity text-sm">
                   Subscribe
                 </button>
               </form>

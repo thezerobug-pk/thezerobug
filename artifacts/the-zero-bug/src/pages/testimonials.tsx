@@ -29,7 +29,7 @@ const testimonials = [
     role: "CEO",
     company: "NovaPay",
     initials: "MH",
-    gradient: "from-purple-500 to-pink-500",
+    gradient: "from-rose-500 to-pink-500",
     rating: 5,
     quote: "We hired The Zero Bug to rescue a project that two other agencies had failed to deliver. They came in, assessed the codebase in 48 hours, gave us a clear plan, and shipped in 6 weeks. Absolute lifesavers.",
     result: "2M+ app downloads",
@@ -97,7 +97,7 @@ export default function Testimonials() {
   return (
     <div className="overflow-hidden">
       {/* Hero */}
-      <section className="relative py-32 bg-gradient-to-br from-blue-50 via-white to-purple-50">
+      <section className="relative py-32 bg-gradient-to-br from-blue-50 via-white to-blue-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-900">
         <FloatingOrbs />
         <AnimatedSection className="max-w-4xl mx-auto px-4 text-center">
           <div className="inline-flex items-center gap-2 bg-primary/10 text-primary text-sm font-medium px-4 py-2 rounded-full mb-6 border border-primary/20">
@@ -106,14 +106,14 @@ export default function Testimonials() {
           </div>
           <h1 className="text-5xl md:text-6xl font-black tracking-tight text-foreground mb-6">
             What Our Clients <br />
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Actually Say</span>
+            <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Actually Say</span>
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">Real reviews from real clients. No PR polish, no cherry-picking — just honest feedback from people who trusted us with their products.</p>
         </AnimatedSection>
       </section>
 
       {/* Stats */}
-      <section className="py-16 bg-white border-b border-border">
+      <section className="py-16 bg-white dark:bg-slate-900 border-b border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4 gap-6">
           {stats.map((s, i) => (
             <AnimatedSection key={s.label} delay={i * 0.08}>
@@ -128,7 +128,7 @@ export default function Testimonials() {
       </section>
 
       {/* Auto Carousel */}
-      <section className="py-16 bg-gradient-to-br from-blue-600 to-purple-700 relative overflow-hidden">
+      <section className="py-16 bg-gradient-to-br from-blue-700 to-cyan-600 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(255,255,255,0.05)_0%,_transparent_70%)]" />
         <div className="max-w-4xl mx-auto px-4 text-center relative">
           <Quote className="h-12 w-12 text-white/20 mx-auto mb-6" />
@@ -166,7 +166,7 @@ export default function Testimonials() {
       </section>
 
       {/* Grid */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-white dark:bg-slate-900 dark:bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-12">
             <h2 className="text-4xl font-black">All Client Reviews</h2>
@@ -218,7 +218,7 @@ export default function Testimonials() {
           </AnimatedSection>
           <div className="flex flex-wrap justify-center gap-4">
             {logos.map((logo) => (
-              <div key={logo} className="px-6 py-3 bg-white rounded-full border border-border text-sm font-semibold text-muted-foreground hover:text-foreground hover:border-primary/30 transition-all">
+              <div key={logo} className="px-6 py-3 bg-white dark:bg-slate-900 rounded-full border border-border text-sm font-semibold text-muted-foreground hover:text-foreground hover:border-primary/30 transition-all">
                 {logo}
               </div>
             ))}
@@ -227,7 +227,7 @@ export default function Testimonials() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 bg-gradient-to-br from-blue-600 to-purple-700">
+      <section className="py-24 bg-gradient-to-br from-blue-700 to-cyan-600">
         <AnimatedSection className="max-w-3xl mx-auto px-4 text-center">
           <h2 className="text-4xl font-black text-white mb-4">Ready to Become Our Next Success Story?</h2>
           <p className="text-white/80 mb-8">Join 150+ companies that ship exceptional software with The Zero Bug.</p>
