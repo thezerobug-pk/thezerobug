@@ -11,8 +11,8 @@ const solutions = [
     desc: "Go from idea to MVP in weeks, not months. We help startups move fast and build on a foundation that scales.",
     features: ["Rapid MVP Development", "Lean Architecture", "Investor-Ready Tech Stack", "Scalable from Day One"],
     color: "from-blue-500 to-cyan-500",
-    bg: "from-blue-50 to-cyan-50",
-    border: "border-blue-100",
+    bg: "from-blue-50 to-cyan-50 dark:from-slate-800 dark:to-slate-900",
+    border: "border-blue-100 dark:border-slate-700",
   },
   {
     icon: Building2,
@@ -20,7 +20,7 @@ const solutions = [
     desc: "Complex, mission-critical systems that meet enterprise security, compliance, and scale requirements.",
     features: ["Legacy System Modernization", "Microservices Migration", "Enterprise Security (SOC2)", "24/7 SLA Support"],
     color: "from-slate-600 to-slate-800",
-    bg: "from-slate-50 to-gray-50",
+    bg: "from-slate-50 to-gray-50 dark:from-slate-800 dark:to-slate-900",
     border: "border-slate-200",
   },
   {
@@ -29,8 +29,8 @@ const solutions = [
     desc: "Replace repetitive workflows with intelligent systems. Save thousands of hours per year.",
     features: ["Document Processing AI", "Intelligent Routing", "Predictive Analytics", "LLM-Powered Workflows"],
     color: "from-blue-500 to-sky-600",
-    bg: "from-blue-50 to-sky-50",
-    border: "border-blue-100",
+    bg: "from-blue-50 to-sky-50 dark:from-slate-800 dark:to-slate-900",
+    border: "border-blue-100 dark:border-slate-700",
   },
   {
     icon: CreditCard,
@@ -38,7 +38,7 @@ const solutions = [
     desc: "Secure, compliant financial platforms built for regulatory scrutiny and high transaction volumes.",
     features: ["PCI-DSS Compliance", "Real-Time Payment Processing", "Fraud Detection", "Multi-Currency Support"],
     color: "from-emerald-500 to-teal-500",
-    bg: "from-emerald-50 to-teal-50",
+    bg: "from-emerald-50 to-teal-50 dark:from-slate-800 dark:to-slate-900",
     border: "border-emerald-100",
   },
   {
@@ -47,7 +47,7 @@ const solutions = [
     desc: "HIPAA-compliant digital health solutions that improve patient outcomes and streamline clinical workflows.",
     features: ["HIPAA Compliance", "EHR Integration (HL7/FHIR)", "Telemedicine Platforms", "Patient Portals"],
     color: "from-rose-500 to-pink-500",
-    bg: "from-rose-50 to-pink-50",
+    bg: "from-rose-50 to-pink-50 dark:from-slate-800 dark:to-slate-900",
     border: "border-rose-100",
   },
   {
@@ -56,7 +56,7 @@ const solutions = [
     desc: "Custom enterprise resource planning systems that unify your operations, finance, and supply chain.",
     features: ["Custom ERP Development", "SAP/Oracle Integration", "Supply Chain Management", "Real-Time Reporting"],
     color: "from-amber-500 to-orange-500",
-    bg: "from-amber-50 to-orange-50",
+    bg: "from-amber-50 to-orange-50 dark:from-slate-800 dark:to-slate-900",
     border: "border-amber-100",
   },
   {
@@ -65,7 +65,7 @@ const solutions = [
     desc: "Customer relationship management platforms that turn data into revenue and conversations into deals.",
     features: ["Custom CRM Development", "Salesforce Integration", "Lead Scoring & Routing", "Pipeline Analytics"],
     color: "from-cyan-500 to-blue-500",
-    bg: "from-cyan-50 to-blue-50",
+    bg: "from-cyan-50 to-blue-50 dark:from-slate-800 dark:to-slate-900",
     border: "border-cyan-100",
   },
   {
@@ -74,7 +74,7 @@ const solutions = [
     desc: "Real-time data visualization platforms that give your team the insights they need, when they need them.",
     features: ["Real-Time Data Streaming", "Custom Chart Libraries", "Role-Based Access Control", "Export & Reporting"],
     color: "from-blue-500 to-sky-600",
-    bg: "from-blue-50 to-sky-50",
+    bg: "from-blue-50 to-sky-50 dark:from-slate-800 dark:to-slate-900",
     border: "border-indigo-100",
   },
 ];

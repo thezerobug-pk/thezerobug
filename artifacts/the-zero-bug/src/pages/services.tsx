@@ -12,8 +12,8 @@ const services = [
     features: ["React & Next.js Applications", "Full-Stack Node.js APIs", "GraphQL & REST Services", "Performance Optimization", "PWA Development"],
     tech: ["React", "Next.js", "TypeScript", "Node.js", "PostgreSQL", "GraphQL"],
     color: "from-blue-500 to-cyan-500",
-    bg: "from-blue-50 to-cyan-50",
-    border: "border-blue-100",
+    bg: "from-blue-50 to-cyan-50 dark:from-slate-800 dark:to-slate-900",
+    border: "border-blue-100 dark:border-slate-700",
   },
   {
     icon: Smartphone,
@@ -22,8 +22,8 @@ const services = [
     features: ["React Native Cross-Platform", "Flutter Apps", "Native iOS & Android", "Offline-First Architecture", "App Store Optimization"],
     tech: ["React Native", "Flutter", "Swift", "Kotlin", "Firebase"],
     color: "from-rose-500 to-pink-500",
-    bg: "from-rose-50 to-pink-50",
-    border: "border-blue-100",
+    bg: "from-rose-50 to-pink-50 dark:from-slate-800 dark:to-slate-900",
+    border: "border-blue-100 dark:border-slate-700",
   },
   {
     icon: Layers,
@@ -32,7 +32,7 @@ const services = [
     features: ["User Research & Testing", "Interactive Prototyping", "Design Systems", "Brand Identity", "Accessibility (WCAG 2.2)"],
     tech: ["Figma", "Adobe XD", "Framer", "Storybook", "Lottie"],
     color: "from-orange-500 to-amber-500",
-    bg: "from-orange-50 to-amber-50",
+    bg: "from-orange-50 to-amber-50 dark:from-slate-800 dark:to-slate-900",
     border: "border-orange-100",
   },
   {
@@ -42,8 +42,8 @@ const services = [
     features: ["Multi-Tenant Architecture", "Subscription Billing (Stripe)", "Admin Dashboards", "Usage Analytics", "Webhook Systems"],
     tech: ["Next.js", "Node.js", "PostgreSQL", "Stripe", "Redis", "AWS"],
     color: "from-teal-500 to-emerald-500",
-    bg: "from-teal-50 to-emerald-50",
-    border: "border-teal-100",
+    bg: "from-teal-50 to-emerald-50 dark:from-slate-800 dark:to-slate-900",
+    border: "border-teal-100 dark:border-slate-700",
   },
   {
     icon: Brain,
@@ -52,7 +52,7 @@ const services = [
     features: ["LLM Integration (GPT, Claude)", "RAG Pipelines", "Computer Vision Systems", "NLP & Text Analytics", "AI-powered Workflows"],
     tech: ["Python", "LangChain", "OpenAI", "Hugging Face", "Pinecone", "PyTorch"],
     color: "from-blue-500 to-sky-600",
-    bg: "from-blue-50 to-sky-50",
+    bg: "from-blue-50 to-sky-50 dark:from-slate-800 dark:to-slate-900",
     border: "border-indigo-100",
   },
   {
@@ -62,7 +62,7 @@ const services = [
     features: ["Multi-Cloud Architecture", "Serverless & Microservices", "Database Scaling", "Security & Compliance", "Cost Optimization"],
     tech: ["AWS", "GCP", "Azure", "Terraform", "Pulumi", "CloudFormation"],
     color: "from-cyan-500 to-blue-500",
-    bg: "from-cyan-50 to-blue-50",
+    bg: "from-cyan-50 to-blue-50 dark:from-slate-800 dark:to-slate-900",
     border: "border-cyan-100",
   },
   {
@@ -72,7 +72,7 @@ const services = [
     features: ["CI/CD Pipelines", "Container Orchestration", "Infrastructure as Code", "Monitoring & Alerting", "Site Reliability Engineering"],
     tech: ["Docker", "Kubernetes", "GitHub Actions", "Datadog", "Prometheus", "ArgoCD"],
     color: "from-slate-600 to-slate-800",
-    bg: "from-slate-50 to-gray-50",
+    bg: "from-slate-50 to-gray-50 dark:from-slate-800 dark:to-slate-900",
     border: "border-slate-200",
   },
   {
@@ -82,7 +82,7 @@ const services = [
     features: ["Custom Storefront Development", "Shopify & WooCommerce", "Payment Gateway Integration", "Inventory Management", "Analytics & A/B Testing"],
     tech: ["Shopify", "Next.js Commerce", "Stripe", "Algolia", "Contentful"],
     color: "from-rose-500 to-pink-500",
-    bg: "from-rose-50 to-pink-50",
+    bg: "from-rose-50 to-pink-50 dark:from-slate-800 dark:to-slate-900",
     border: "border-rose-100",
   },
 ];

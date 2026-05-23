@@ -12,7 +12,6 @@ import Solutions from "@/pages/solutions";
 import Products from "@/pages/products";
 import Portfolio from "@/pages/portfolio";
 import Blog from "@/pages/blog";
-import Careers from "@/pages/careers";
 import Contact from "@/pages/contact";
 import Pricing from "@/pages/pricing";
 import Testimonials from "@/pages/testimonials";
@@ -33,7 +32,6 @@ function Router() {
           <Route path="/products" component={Products} />
           <Route path="/portfolio" component={Portfolio} />
           <Route path="/blog" component={Blog} />
-          <Route path="/careers" component={Careers} />
           <Route path="/contact" component={Contact} />
           <Route path="/pricing" component={Pricing} />
           <Route path="/testimonials" component={Testimonials} />

@@ -64,7 +64,7 @@ export default function About() {
           <AnimatedSection>
             <motion.div
               whileHover={{ y: -4 }}
-              className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-3xl p-8 border border-blue-100 h-full"
+              className="bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-slate-800 dark:to-slate-900 rounded-3xl p-8 border border-blue-100 dark:border-slate-700 h-full"
             >
               <div className="inline-flex p-3 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-500 mb-5">
                 <Target className="h-7 w-7 text-white" />
@@ -78,7 +78,7 @@ export default function About() {
           <AnimatedSection delay={0.1}>
             <motion.div
               whileHover={{ y: -4 }}
-              className="bg-gradient-to-br from-rose-50 to-pink-50 rounded-3xl p-8 border border-blue-100 h-full"
+              className="bg-gradient-to-br from-rose-50 to-pink-50 dark:from-slate-800 dark:to-slate-900 rounded-3xl p-8 border border-blue-100 dark:border-slate-700 h-full"
             >
               <div className="inline-flex p-3 rounded-2xl bg-gradient-to-br from-rose-500 to-pink-500 mb-5">
                 <Eye className="h-7 w-7 text-white" />
@@ -191,7 +191,7 @@ export default function About() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {awards.map((a, i) => (
               <AnimatedSection key={a.name} delay={i * 0.08}>
-                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl border border-blue-100 p-5 text-center">
+                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-slate-800 dark:to-slate-900 rounded-2xl border border-blue-100 dark:border-slate-700 p-5 text-center">
                   <Award className="h-8 w-8 text-primary mx-auto mb-3" />
                   <p className="font-bold text-sm text-foreground">{a.name}</p>
                   <p className="text-xs text-muted-foreground mt-1">{a.cat}</p>

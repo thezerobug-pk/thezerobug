@@ -146,7 +146,7 @@ export default function Contact() {
           {/* Info */}
           <AnimatedSection delay={0.1}>
             <div className="space-y-6">
-              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl border border-blue-100 p-6">
+              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-slate-800 dark:to-slate-900 rounded-2xl border border-blue-100 dark:border-slate-700 p-6">
                 <div className="flex items-center gap-3 mb-2">
                   <div className="p-2 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500">
                     <Mail className="h-5 w-5 text-white" />
@@ -157,7 +157,7 @@ export default function Contact() {
                 <p className="text-xs text-muted-foreground mt-1">For general inquiries and project discussions</p>
               </div>
 
-              <div className="bg-gradient-to-br from-rose-50 to-pink-50 rounded-2xl border border-blue-100 p-6">
+              <div className="bg-gradient-to-br from-rose-50 to-pink-50 dark:from-slate-800 dark:to-slate-900 rounded-2xl border border-blue-100 dark:border-slate-700 p-6">
                 <div className="flex items-center gap-3 mb-2">
                   <div className="p-2 rounded-xl bg-gradient-to-br from-rose-500 to-pink-500">
                     <Phone className="h-5 w-5 text-white" />

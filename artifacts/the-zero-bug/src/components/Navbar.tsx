@@ -31,7 +31,6 @@ export function Navbar() {
     { name: "Products", href: "/products" },
     { name: "Portfolio", href: "/portfolio" },
     { name: "Blog", href: "/blog" },
-    { name: "Careers", href: "/careers" },
     { name: "Pricing", href: "/pricing" },
     { name: "Contact", href: "/contact" },
   ];

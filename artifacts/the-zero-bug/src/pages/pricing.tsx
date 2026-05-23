@@ -13,7 +13,7 @@ const tiers = [
     monthlyPrice: "$2,999",
     yearlyPrice: "$2,399",
     color: "from-blue-500 to-cyan-500",
-    bg: "bg-gradient-to-br from-blue-50 to-cyan-50",
+    bg: "bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-slate-800 dark:to-slate-900",
     border: "border-blue-200",
     highlight: false,
     features: [
@@ -61,7 +61,7 @@ const tiers = [
     monthlyPrice: "Custom",
     yearlyPrice: "Custom",
     color: "from-slate-600 to-slate-800",
-    bg: "bg-gradient-to-br from-slate-50 to-gray-100",
+    bg: "bg-gradient-to-br from-slate-50 to-gray-100 dark:from-slate-800 dark:to-slate-900",
     border: "border-slate-200",
     highlight: false,
     features: [
@@ -215,7 +215,7 @@ export default function Pricing() {
                     <th className="text-left p-4 font-semibold text-foreground/70">Feature</th>
                     <th className="text-center p-4 font-semibold text-blue-600">Starter</th>
                     <th className="text-center p-4 font-semibold text-blue-600">Professional</th>
-                    <th className="text-center p-4 font-semibold text-slate-700">Enterprise</th>
+                    <th className="text-center p-4 font-semibold text-slate-700 dark:text-slate-300">Enterprise</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -244,7 +244,7 @@ export default function Pricing() {
                 <p className="text-white/60 text-sm">Enterprise plans include dedicated teams, SLA guarantees, and on-site availability. Let's design the right engagement for your organization.</p>
               </div>
               <Link href="/contact">
-                <button className="flex-shrink-0 bg-white dark:bg-slate-900 text-slate-900 font-bold px-7 py-3.5 rounded-full hover:bg-white/90 transition-all flex items-center gap-2">
+                <button className="flex-shrink-0 bg-white dark:bg-slate-900 text-slate-900 dark:text-white font-bold px-7 py-3.5 rounded-full hover:bg-white/90 transition-all flex items-center gap-2">
                   Contact Sales <ArrowRight className="h-4 w-4" />
                 </button>
               </Link>
