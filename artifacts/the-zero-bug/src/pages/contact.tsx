@@ -21,6 +21,31 @@ const faqs = [
 export default function Contact() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [formData, setFormData] = useState({ name: "", email: "", phone: "", company: "", service: "", message: "" });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{success?: boolean, message?: string} | null>(null);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      const data = await res.json();
+      if (res.ok) {
+        setSubmitStatus({ success: true, message: data.message });
+        setFormData({ name: "", email: "", phone: "", company: "", service: "", message: "" });
+      } else {
+        setSubmitStatus({ success: false, message: data.error || "Something went wrong" });
+      }
+    } catch (err) {
+      setSubmitStatus({ success: false, message: "Failed to send message. Please try again later." });
+    }
+    setIsSubmitting(false);
+  };
 
   return (
     <div className="overflow-hidden">
@@ -49,7 +74,7 @@ export default function Contact() {
           <AnimatedSection>
             <div className="bg-white rounded-3xl border border-border p-8 shadow-xl shadow-blue-500/5">
               <h2 className="text-2xl font-black text-foreground mb-6">Send Us a Message</h2>
-              <form className="space-y-4">
+              <form className="space-y-4" onSubmit={handleSubmit}>
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <label className="text-xs font-semibold text-foreground/70 mb-1.5 block">Full Name</label>
@@ -58,7 +83,7 @@ export default function Contact() {
                       type="text"
                       placeholder="Alex Johnson"
                       value={formData.name}
-                      onChange={e => setFormData({...formData, name: e.target.value})}
+                      onChange={e => setFormData({ ...formData, name: e.target.value })}
                       className="w-full px-4 py-3 rounded-xl border border-border bg-secondary/50 focus:outline-none focus:ring-2 focus:ring-primary/30 text-sm"
                     />
                   </div>
@@ -69,7 +94,7 @@ export default function Contact() {
                       type="email"
                       placeholder="alex@company.com"
                       value={formData.email}
-                      onChange={e => setFormData({...formData, email: e.target.value})}
+                      onChange={e => setFormData({ ...formData, email: e.target.value })}
                       className="w-full px-4 py-3 rounded-xl border border-border bg-secondary/50 focus:outline-none focus:ring-2 focus:ring-primary/30 text-sm"
                     />
                   </div>
@@ -82,7 +107,7 @@ export default function Contact() {
                       type="tel"
                       placeholder="+1 (555) 000-0000"
                       value={formData.phone}
-                      onChange={e => setFormData({...formData, phone: e.target.value})}
+                      onChange={e => setFormData({ ...formData, phone: e.target.value })}
                       className="w-full px-4 py-3 rounded-xl border border-border bg-secondary/50 focus:outline-none focus:ring-2 focus:ring-primary/30 text-sm"
                     />
                   </div>
@@ -93,7 +118,7 @@ export default function Contact() {
                       type="text"
                       placeholder="Your Company"
                       value={formData.company}
-                      onChange={e => setFormData({...formData, company: e.target.value})}
+                      onChange={e => setFormData({ ...formData, company: e.target.value })}
                       className="w-full px-4 py-3 rounded-xl border border-border bg-secondary/50 focus:outline-none focus:ring-2 focus:ring-primary/30 text-sm"
                     />
                   </div>
@@ -103,7 +128,7 @@ export default function Contact() {
                   <select
                     data-testid="select-contact-service"
                     value={formData.service}
-                    onChange={e => setFormData({...formData, service: e.target.value})}
+                    onChange={e => setFormData({ ...formData, service: e.target.value })}
                     className="w-full px-4 py-3 rounded-xl border border-border bg-secondary/50 focus:outline-none focus:ring-2 focus:ring-primary/30 text-sm text-foreground"
                   >
                     <option value="">Select a service...</option>
@@ -124,7 +149,7 @@ export default function Contact() {
                     rows={5}
                     placeholder="Describe your project, goals, timeline, and budget range..."
                     value={formData.message}
-                    onChange={e => setFormData({...formData, message: e.target.value})}
+                    onChange={e => setFormData({ ...formData, message: e.target.value })}
                     className="w-full px-4 py-3 rounded-xl border border-border bg-secondary/50 focus:outline-none focus:ring-2 focus:ring-primary/30 text-sm resize-none"
                   />
                 </div>
@@ -133,11 +158,17 @@ export default function Contact() {
                   whileHover={{ scale: 1.01 }}
                   whileTap={{ scale: 0.99 }}
                   type="submit"
-                  className="w-full bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold py-4 rounded-xl hover:opacity-90 transition-opacity flex items-center justify-center gap-2 shadow-lg shadow-blue-500/20"
+                  disabled={isSubmitting}
+                  className="w-full bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold py-4 rounded-xl hover:opacity-90 transition-opacity flex items-center justify-center gap-2 shadow-lg shadow-blue-500/20 disabled:opacity-50"
                 >
                   <Send className="h-5 w-5" />
-                  Send Message
+                  {isSubmitting ? "Sending..." : "Send Message"}
                 </motion.button>
+                {submitStatus && (
+                  <div className={`p-4 rounded-xl text-sm ${submitStatus.success ? "bg-green-50 text-green-700 border border-green-200" : "bg-red-50 text-red-700 border border-red-200"}`}>
+                    {submitStatus.message}
+                  </div>
+                )}
                 <p className="text-xs text-center text-muted-foreground">We respond within 24 hours on business days.</p>
               </form>
             </div>
@@ -153,7 +184,7 @@ export default function Contact() {
                   </div>
                   <h3 className="font-bold text-foreground">Email Us</h3>
                 </div>
-                <a href="mailto:hello@thezerobug.com" className="text-primary hover:underline text-sm">hello@thezerobug.com</a>
+                <a href="mailto:thezerobug.pk@gmail.com" className="text-primary hover:underline text-sm">thezerobug.pk@gmail.com</a>
                 <p className="text-xs text-muted-foreground mt-1">For general inquiries and project discussions</p>
               </div>
 
@@ -164,35 +195,8 @@ export default function Contact() {
                   </div>
                   <h3 className="font-bold text-foreground">Call Us</h3>
                 </div>
-                <a href="tel:+14155550123" className="text-primary hover:underline text-sm">+1 (415) 555-0123</a>
+                <a href="tel:+923352584251" className="text-primary hover:underline text-sm">+92 335 2584251</a>
                 <p className="text-xs text-muted-foreground mt-1">Mon–Fri, 9am–6pm PST</p>
-              </div>
-
-              <div>
-                <h3 className="font-bold text-foreground mb-4">Our Offices</h3>
-                <div className="space-y-3">
-                  {offices.map((o) => (
-                    <div key={o.city} className="bg-white rounded-2xl border border-border p-4 flex items-start gap-3">
-                      <div className="w-10 h-10 rounded-xl bg-secondary flex items-center justify-center text-xl flex-shrink-0">
-                        {o.flag}
-                      </div>
-                      <div>
-                        <p className="font-bold text-sm text-foreground">{o.city}</p>
-                        <p className="text-xs text-muted-foreground leading-relaxed">{o.address}</p>
-                        <p className="text-xs text-primary mt-1">{o.tz}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Map placeholder */}
-              <div className="rounded-2xl bg-gradient-to-br from-blue-100 to-cyan-100 border border-blue-200 h-40 flex items-center justify-center">
-                <div className="text-center">
-                  <MapPin className="h-8 w-8 text-primary mx-auto mb-2" />
-                  <p className="text-sm font-medium text-foreground/70">Interactive Map</p>
-                  <p className="text-xs text-muted-foreground">3 global offices</p>
-                </div>
               </div>
             </div>
           </AnimatedSection>

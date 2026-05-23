@@ -14,12 +14,8 @@ const team = [
 ];
 
 const timeline = [
-  { year: "2012", event: "Founded", desc: "Started in a San Francisco co-working space with 3 engineers and a bold promise." },
-  { year: "2015", event: "First Enterprise Client", desc: "Landed our first Fortune 500 client and grew to 15 engineers." },
-  { year: "2018", event: "AI Division Launched", desc: "Built our dedicated AI/ML practice as LLMs started reshaping the industry." },
-  { year: "2020", event: "Global Expansion", desc: "Opened offices in London and Singapore to serve clients worldwide." },
-  { year: "2023", event: "200+ Projects", desc: "Hit our 200th successfully delivered project with 0 critical production bugs." },
-  { year: "2026", event: "Today", desc: "50+ engineers, 12 years of zero-defect engineering, and just getting started." },
+  { year: "2025", event: "Founded", desc: "Started the company in Karachi, Pakistan with 6 computer science students and a bold promise." },
+  { year: "2026", event: "Today", desc: "Completed 50+ projects, expanded to a team of 20+ remote employees, and just getting started." },
 ];
 
 const values = [
@@ -53,7 +49,7 @@ export default function About() {
             The Agency Built on a <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Bold Promise</span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-            In 2012, we made a promise: deliver software with zero critical bugs. Twelve years later, that promise has held through 200+ projects, 50+ engineers, and clients in 30 countries.
+            In late 2025, we made a promise: deliver software with zero critical bugs. Today, that promise has held through 50+ projects and a growing team of 20+ remote employees.
           </p>
         </AnimatedSection>
       </section>
@@ -97,7 +93,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-black">Meet the <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Team</span></h2>
-            <p className="mt-4 text-lg text-muted-foreground">The people behind 12 years of zero-defect engineering.</p>
+            <p className="mt-4 text-lg text-muted-foreground">The people behind our zero-defect engineering.</p>
           </AnimatedSection>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {team.map((member, i) => (
@@ -183,7 +179,7 @@ export default function About() {
       </section>
 
       {/* Awards */}
-      <section className="py-24 bg-white dark:bg-slate-900 dark:bg-slate-900">
+      {/* <section className="py-24 bg-white dark:bg-slate-900 dark:bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-12">
             <h2 className="text-3xl font-black">Awards & Certifications</h2>
@@ -200,7 +196,7 @@ export default function About() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA */}
       <section className="py-24 bg-gradient-to-br from-blue-700 to-cyan-600">

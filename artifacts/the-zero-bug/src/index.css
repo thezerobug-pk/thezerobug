@@ -202,3 +202,57 @@
     @apply font-sans antialiased bg-background text-foreground;
   }
 }
+
+/* ============================================================================
+   GLOBAL BUTTON BLACK OVERRIDES
+   ============================================================================ */
+
+/* ============================================================================
+   GLOBAL BUTTON BLACK OVERRIDES
+   Only targets explicitly colored CTA buttons, not utility/toggle/accordion buttons
+   ============================================================================ */
+
+button[class*="bg-gradient-to-r"],
+button[class*="bg-primary"],
+button[class*="bg-blue"],
+button[class*="bg-cyan"],
+button[class*="bg-indigo"],
+button[class*="bg-slate-9"],
+button[class*="bg-white"][data-testid],
+input[type="submit"] {
+  background-color: #000000 !important;
+  background-image: none !important;
+  color: #ffffff !important;
+  border-color: #000000 !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Ensure SVG icons inside colored buttons are white */
+button[class*="bg-gradient-to-r"] svg,
+button[class*="bg-primary"] svg,
+button[class*="bg-blue"] svg,
+button[class*="bg-cyan"] svg,
+button[class*="bg-indigo"] svg,
+button[class*="bg-white"][data-testid] svg,
+input[type="submit"] svg {
+  color: #ffffff !important;
+}
+
+/* Hover state for black buttons */
+button[class*="bg-gradient-to-r"]:hover,
+button[class*="bg-primary"]:hover,
+button[class*="bg-blue"]:hover,
+button[class*="bg-cyan"]:hover,
+button[class*="bg-indigo"]:hover,
+button[class*="bg-slate-9"]:hover,
+button[class*="bg-white"][data-testid]:hover,
+input[type="submit"]:hover {
+  background-color: #1a1a1c !important;
+  background-image: none !important;
+  color: #ffffff !important;
+  border-color: #1a1a1c !important;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25) !important;
+  transform: translateY(-1px) !important;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+

@@ -132,11 +132,10 @@ export default function Products() {
               key={cat}
               data-testid={`filter-${cat.toLowerCase()}`}
               onClick={() => setActiveCategory(cat)}
-              className={`px-5 py-2 rounded-full text-sm font-semibold transition-all ${
-                activeCategory === cat
-                  ? "bg-gradient-to-r from-blue-600 to-cyan-500 text-white shadow-md"
-                  : "bg-secondary text-foreground hover:text-primary border border-border"
-              }`}
+              className={`px-5 py-2 rounded-full text-sm font-semibold transition-all ${activeCategory === cat
+                ? "bg-gradient-to-r from-blue-600 to-cyan-500 text-white shadow-md"
+                : "bg-secondary text-foreground hover:text-primary border border-border"
+                }`}
             >
               {cat}
             </button>
@@ -180,19 +179,7 @@ export default function Products() {
                       </span>
                     ))}
                   </div>
-                  <div className="pt-4 border-t border-white/60 flex items-center justify-between">
-                    <div>
-                      <span className="text-xs text-muted-foreground">Starting from</span>
-                      <p className="text-lg font-black text-foreground">{p.price}</p>
-                    </div>
-                    <div className="flex gap-2">
-                      <Link href="/contact">
-                        <button className={`text-xs font-bold px-4 py-2 rounded-full bg-gradient-to-r ${p.color} text-white hover:opacity-90 transition-opacity`}>
-                          View Demo
-                        </button>
-                      </Link>
-                    </div>
-                  </div>
+
                 </motion.div>
               </AnimatedSection>
             ))}

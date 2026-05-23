@@ -126,11 +126,10 @@ export default function Blog() {
                 key={cat}
                 data-testid={`blog-cat-${cat.toLowerCase()}`}
                 onClick={() => setActiveCat(cat)}
-                className={`px-5 py-2 rounded-full text-sm font-semibold transition-all ${
-                  activeCat === cat
+                className={`px-5 py-2 rounded-full text-sm font-semibold transition-all ${activeCat === cat
                     ? "bg-gradient-to-r from-blue-600 to-cyan-500 text-white shadow-md"
                     : "bg-white text-foreground hover:text-primary border border-border"
-                }`}
+                  }`}
               >
                 {cat}
               </button>
@@ -172,30 +171,7 @@ export default function Blog() {
         </div>
       </section>
 
-      {/* Newsletter */}
-      <section className="py-24 bg-white dark:bg-slate-900 dark:bg-slate-900">
-        <div className="max-w-3xl mx-auto px-4">
-          <AnimatedSection>
-            <div className="bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-slate-800 dark:to-slate-900 rounded-3xl border border-blue-100 dark:border-slate-700 p-10 text-center">
-              <Rss className="h-10 w-10 text-primary mx-auto mb-4" />
-              <h2 className="text-3xl font-black text-foreground mb-3">Get the best articles, weekly</h2>
-              <p className="text-muted-foreground mb-6">Join 12,000+ engineers who read The Zero Bug's engineering insights every Tuesday.</p>
-              <form className="flex gap-2 max-w-md mx-auto">
-                <input
-                  data-testid="input-newsletter-email"
-                  type="email"
-                  placeholder="your@email.com"
-                  className="flex-1 px-4 py-3 rounded-full border border-border bg-white dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-primary/30 text-sm"
-                />
-                <button data-testid="button-newsletter-subscribe" type="submit" className="bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-semibold px-6 py-3 rounded-full hover:opacity-90 transition-opacity text-sm">
-                  Subscribe
-                </button>
-              </form>
-              <p className="text-xs text-muted-foreground mt-3">No spam. Unsubscribe anytime.</p>
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
+
     </div>
   );
 }

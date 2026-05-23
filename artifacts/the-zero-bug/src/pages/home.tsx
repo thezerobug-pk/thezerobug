@@ -6,6 +6,7 @@ import {
 } from "lucide-react";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { FloatingOrbs } from "@/components/FloatingOrbs";
+import { Sprinkles } from "@/components/Sprinkles";
 
 const services = [
   { icon: Globe, title: "Web Development", desc: "Blazing-fast web apps built with modern frameworks that scale to millions.", color: "from-blue-500 to-cyan-500" },
@@ -19,7 +20,7 @@ const services = [
 ];
 
 const stats = [
-  { value: "200+", label: "Projects Delivered", icon: TrendingUp },
+  { value: "50+", label: "Projects Delivered", icon: TrendingUp },
   { value: "98%", label: "Client Satisfaction", icon: Star },
   { value: "50+", label: "Expert Engineers", icon: Users },
   { value: "12+", label: "Years Experience", icon: Award },
@@ -47,8 +48,35 @@ const blogs = [
 ];
 
 const techStack = [
-  "React", "Next.js", "TypeScript", "Node.js", "Python", "Flutter",
-  "AWS", "GCP", "Docker", "Kubernetes", "PostgreSQL", "MongoDB"
+  { name: "React", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+  { name: "Next.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" },
+  { name: "TypeScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
+  { name: "JavaScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
+  { name: "Node.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
+  { name: "Python", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+  { name: "Flutter", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" },
+  { name: "Dart", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" },
+  { name: "Swift", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swift/swift-original.svg" },
+  { name: "Kotlin", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" },
+  { name: "Go", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg" },
+  { name: "Rust", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rust/rust-original.svg" },
+  { name: "GCP", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" },
+  { name: "Azure", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" },
+  { name: "Docker", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
+  { name: "Kubernetes", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-original.svg" },
+  { name: "PostgreSQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
+  { name: "MongoDB", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
+  { name: "Redis", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" },
+  { name: "GraphQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg" },
+  { name: "TailwindCSS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" },
+  { name: "Vue.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" },
+  { name: "Angular", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" },
+  { name: "Figma", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" },
+  { name: "Git", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
+  { name: "Linux", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" },
+  { name: "Terraform", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" },
+  { name: "Firebase", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" },
+  { name: "Supabase", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg" },
 ];
 
 const trustedBy = ["Meridian Labs", "NovaPay", "CloudForge", "Apex Systems", "DataStream", "FutureTech", "NexGen", "Vortex AI"];
@@ -60,18 +88,18 @@ export default function Home() {
       <section className="relative min-h-screen flex items-center justify-center pt-20 pb-32">
         <FloatingOrbs />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-50 via-white to-blue-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-900/30 -z-10" />
-        
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-center">
           <div>
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
               className="inline-flex items-center gap-2 bg-primary/10 text-primary text-sm font-medium px-4 py-2 rounded-full mb-6 border border-primary/20"
             >
               <Zap className="h-4 w-4" />
-              200+ Projects Delivered
-            </motion.div>
+              50+ Projects Delivered
+            </motion.div> */}
 
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
@@ -116,7 +144,7 @@ export default function Home() {
               </Link>
             </motion.div>
 
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.5 }}
@@ -131,11 +159,11 @@ export default function Home() {
               </div>
               <div>
                 <div className="flex items-center gap-1">
-                  {[1,2,3,4,5].map(i => <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />)}
+                  {[1, 2, 3, 4, 5].map(i => <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />)}
                 </div>
                 <p className="text-sm text-muted-foreground mt-0.5">Rated 4.9/5 by 150+ clients</p>
               </div>
-            </motion.div>
+            </motion.div> */}
           </div>
 
           {/* Dashboard mockup */}
@@ -219,7 +247,7 @@ export default function Home() {
       </section>
 
       {/* Trusted By */}
-      <section className="py-12 border-y border-border bg-secondary/30">
+      {/* <section className="py-12 border-y border-border bg-secondary/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-center text-sm font-medium text-muted-foreground uppercase tracking-wider mb-6">Trusted by innovative companies</p>
           <div className="flex flex-wrap justify-center gap-4">
@@ -230,7 +258,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Services */}
       <section className="py-24 bg-white dark:bg-slate-900 dark:bg-slate-900">
@@ -252,9 +280,7 @@ export default function Home() {
                   </div>
                   <h3 className="font-bold text-foreground mb-2">{s.title}</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
-                  <div className="mt-4 flex items-center gap-1 text-primary text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity">
-                    Learn more <ArrowRight className="h-3 w-3" />
-                  </div>
+
                 </motion.div>
               </AnimatedSection>
             ))}
@@ -265,6 +291,7 @@ export default function Home() {
       {/* Stats */}
       <section className="py-24 bg-gradient-to-br from-blue-700 to-cyan-600 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(255,255,255,0.1)_0%,_transparent_70%)]" />
+        <Sprinkles count={45} colorStyle="colorful" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <AnimatedSection className="text-center mb-12">
             <h2 className="text-4xl font-black text-white">Numbers That Define Us</h2>
@@ -288,7 +315,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-black tracking-tight">How We <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Deliver</span></h2>
-            <p className="mt-4 text-lg text-muted-foreground">A battle-tested process refined across 200+ projects.</p>
+            <p className="mt-4 text-lg text-muted-foreground">A battle-tested process refined across 50+ projects.</p>
           </AnimatedSection>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             {process.map((p, i) => (
@@ -307,19 +334,26 @@ export default function Home() {
       </section>
 
       {/* Tech Stack */}
-      <section className="py-20 bg-white dark:bg-slate-900 dark:bg-slate-900">
+      <section className="py-20 bg-white dark:bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-black">Technologies We Master</h2>
+            <p className="mt-3 text-muted-foreground text-base">A comprehensive stack to cover every layer of your product</p>
           </AnimatedSection>
-          <div className="flex flex-wrap justify-center gap-3">
+          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-10 gap-4">
             {techStack.map((tech, i) => (
-              <AnimatedSection key={tech} delay={i * 0.04}>
+              <AnimatedSection key={tech.name} delay={i * 0.03}>
                 <motion.div
-                  whileHover={{ scale: 1.05, y: -2 }}
-                  className="px-5 py-2.5 bg-secondary rounded-full text-sm font-semibold text-foreground hover:bg-primary/10 hover:text-primary transition-colors border border-border hover:border-primary/30 cursor-default"
+                  whileHover={{ scale: 1.08, y: -4 }}
+                  className="flex flex-col items-center gap-2 p-3 bg-secondary/50 rounded-2xl border border-border hover:border-primary/30 hover:bg-primary/5 hover:shadow-lg hover:shadow-primary/10 transition-all cursor-default group"
                 >
-                  {tech}
+                  <img
+                    src={tech.logo}
+                    alt={tech.name}
+                    className="h-8 w-8 object-contain group-hover:scale-110 transition-transform"
+                    loading="lazy"
+                  />
+                  <span className="text-[10px] font-semibold text-foreground/70 group-hover:text-primary transition-colors text-center leading-tight">{tech.name}</span>
                 </motion.div>
               </AnimatedSection>
             ))}
@@ -344,17 +378,7 @@ export default function Home() {
                     {Array(t.rating).fill(0).map((_, j) => <Star key={j} className="h-4 w-4 fill-amber-400 text-amber-400" />)}
                   </div>
                   <p className="text-foreground/80 leading-relaxed flex-1 text-sm italic">"{t.text}"</p>
-                  <div className="mt-5 pt-4 border-t border-border">
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center text-white text-xs font-bold">
-                        {t.name.split(' ').map(n => n[0]).join('')}
-                      </div>
-                      <div>
-                        <p className="font-semibold text-sm text-foreground">{t.name}</p>
-                        <p className="text-xs text-muted-foreground">{t.role}</p>
-                      </div>
-                    </div>
-                  </div>
+
                 </motion.div>
               </AnimatedSection>
             ))}
@@ -362,45 +386,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Blog */}
-      <section className="py-24 bg-white dark:bg-slate-900 dark:bg-slate-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimatedSection className="flex items-center justify-between mb-12">
-            <h2 className="text-4xl font-black">Latest Insights</h2>
-            <Link href="/blog">
-              <button className="text-primary font-medium text-sm flex items-center gap-1 hover:gap-2 transition-all">View all <ArrowRight className="h-4 w-4" /></button>
-            </Link>
-          </AnimatedSection>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {blogs.map((b, i) => (
-              <AnimatedSection key={b.title} delay={i * 0.1}>
-                <motion.div
-                  whileHover={{ y: -4 }}
-                  className="group bg-white dark:bg-slate-900 rounded-2xl border border-border overflow-hidden hover:shadow-lg hover:shadow-blue-500/5 transition-all cursor-pointer"
-                >
-                  <div className="h-2 bg-gradient-to-r from-blue-500 to-cyan-400" />
-                  <div className="p-6">
-                    <div className="flex items-center gap-2 mb-3">
-                      <span className="text-xs font-semibold text-primary bg-primary/10 px-3 py-1 rounded-full">{b.cat}</span>
-                      <span className="text-xs text-muted-foreground">{b.time}</span>
-                    </div>
-                    <h3 className="font-bold text-foreground mb-2 group-hover:text-primary transition-colors leading-snug">{b.title}</h3>
-                    <p className="text-sm text-muted-foreground mb-4 leading-relaxed">{b.excerpt}</p>
-                    <div className="flex items-center justify-between">
-                      <span className="text-xs text-muted-foreground">{b.date}</span>
-                      <span className="text-xs text-primary font-medium flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">Read more <ArrowRight className="h-3 w-3" /></span>
-                    </div>
-                  </div>
-                </motion.div>
-              </AnimatedSection>
-            ))}
-          </div>
-        </div>
-      </section>
+
 
       {/* CTA */}
       <section className="py-24 bg-gradient-to-br from-blue-700 to-cyan-600 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_rgba(255,255,255,0.08)_0%,_transparent_60%)]" />
+        <Sprinkles count={45} colorStyle="colorful" />
         <AnimatedSection className="max-w-4xl mx-auto px-4 text-center relative">
           <h2 className="text-4xl md:text-5xl font-black text-white mb-6">Ready to build something great?</h2>
           <p className="text-white/80 text-lg mb-10 max-w-xl mx-auto">Let's turn your vision into a product your users love. Schedule a free strategy call today.</p>

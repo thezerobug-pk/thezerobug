@@ -1,27 +1,16 @@
 import { Link } from "wouter";
-import { Bug, Menu, X, Sun, Moon } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Button } from "./ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
-    const saved = localStorage.getItem("theme");
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    const isDark = saved ? saved === "dark" : prefersDark;
-    setDarkMode(isDark);
-    document.documentElement.classList.toggle("dark", isDark);
+    document.documentElement.classList.remove("dark");
+    localStorage.removeItem("theme");
   }, []);
-
-  const toggleDark = () => {
-    const next = !darkMode;
-    setDarkMode(next);
-    document.documentElement.classList.toggle("dark", next);
-    localStorage.setItem("theme", next ? "dark" : "light");
-  };
 
   const navLinks = [
     { name: "Home", href: "/" },
@@ -30,8 +19,8 @@ export function Navbar() {
     { name: "Solutions", href: "/solutions" },
     { name: "Products", href: "/products" },
     { name: "Portfolio", href: "/portfolio" },
-    { name: "Blog", href: "/blog" },
-    { name: "Pricing", href: "/pricing" },
+    // { name: "Blog", href: "/blog" },
+    { name: "Careers", href: "/careers" },
     { name: "Contact", href: "/contact" },
   ];
 
@@ -40,10 +29,10 @@ export function Navbar() {
       <div className="bg-white/90 dark:bg-slate-900/90 backdrop-blur-xl border border-slate-200/60 dark:border-slate-700/50 rounded-2xl shadow-xl shadow-black/5 dark:shadow-black/40 px-4 h-16 flex items-center justify-between gap-4">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group flex-shrink-0">
-          <div className="p-1.5 rounded-xl bg-gradient-to-br from-primary/20 to-cyan-400/20 group-hover:from-primary/30 group-hover:to-cyan-400/30 transition-colors">
-            <Bug className="h-5 w-5 text-primary" />
+          <div className="p-1 rounded-lg bg-slate-100 group-hover:bg-slate-200 transition-colors flex items-center justify-center h-8 w-8">
+            <img src="/logo.png" alt="The Zero Bug Logo" className="h-6 w-auto object-contain transition-transform group-hover:scale-105" />
           </div>
-          <span className="font-bold text-base tracking-tight bg-gradient-to-r from-primary to-cyan-500 bg-clip-text text-transparent whitespace-nowrap">
+          <span className="font-bold text-base tracking-tight text-black whitespace-nowrap">
             The Zero Bug
           </span>
         </Link>
@@ -63,15 +52,6 @@ export function Navbar() {
 
         {/* Right controls */}
         <div className="flex items-center gap-1.5 flex-shrink-0">
-          <button
-            data-testid="button-dark-mode"
-            onClick={toggleDark}
-            className="p-2 rounded-xl text-foreground/60 dark:text-slate-400 hover:text-foreground dark:hover:text-white hover:bg-secondary dark:hover:bg-slate-800 transition-colors"
-            aria-label="Toggle dark mode"
-          >
-            {darkMode ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
-          </button>
-
           <Link href="/contact" className="hidden lg:block">
             <Button className="bg-gradient-to-r from-primary to-cyan-500 hover:opacity-90 transition-opacity rounded-full px-5 h-9 text-sm shadow-md shadow-primary/20">
               Start a Project

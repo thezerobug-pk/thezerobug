@@ -144,13 +144,7 @@ export default function Solutions() {
                       </li>
                     ))}
                   </ul>
-                  <div className="mt-5 pt-4 border-t border-white/60">
-                    <Link href="/contact">
-                      <span className="text-xs font-semibold text-primary flex items-center gap-1 hover:gap-2 transition-all cursor-pointer">
-                        Explore Solution <ArrowRight className="h-3 w-3" />
-                      </span>
-                    </Link>
-                  </div>
+
                 </motion.div>
               </AnimatedSection>
             ))}

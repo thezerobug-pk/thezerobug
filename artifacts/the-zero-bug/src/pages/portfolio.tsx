@@ -115,7 +115,7 @@ export default function Portfolio() {
             Our Work
           </div>
           <h1 className="text-5xl md:text-6xl font-black tracking-tight text-foreground mb-6">
-            200+ Projects. <br />
+            50+ Projects. <br />
             <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Zero Critical Bugs.</span>
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
@@ -132,11 +132,10 @@ export default function Portfolio() {
               key={cat}
               data-testid={`portfolio-filter-${cat.toLowerCase()}`}
               onClick={() => setActive(cat)}
-              className={`px-5 py-2 rounded-full text-sm font-semibold transition-all ${
-                active === cat
+              className={`px-5 py-2 rounded-full text-sm font-semibold transition-all ${active === cat
                   ? "bg-gradient-to-r from-blue-600 to-cyan-500 text-white shadow-md"
                   : "bg-secondary text-foreground hover:text-primary border border-border"
-              }`}
+                }`}
             >
               {cat}
             </button>
