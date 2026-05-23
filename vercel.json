@@ -1,0 +1,10 @@
+{
+  "buildCommand": "pnpm --filter @workspace/the-zero-bug run build",
+  "outputDirectory": "artifacts/the-zero-bug/dist/public",
+  "installCommand": "pnpm install",
+  "framework": null,
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api/$1" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
